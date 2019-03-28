@@ -26,26 +26,26 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">WINDEV1810EVAL</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcl1VxYOa7kKDkDAvVzBZ0gAAAAACAAAAAAAQZgAAAAEAACAAAABOOdk5WG2g3NHHH8qkAGh3lsPv7BEhCpQ2U39dyS/wpgAAAAAOgAAAAAIAACAAAACjlkyZjuo8AiuihKgEd31V7w9tqR9qOcbyQ1Tsb/trFpAAAAA4/Fnbl9+19ZB4imL0NebDXnMy5UcKSJTjONJW0G7Sg87uY3OX/Xu0qMgfKU1mEgxqXlRopW77zJfhVptiaBmRtwiMG4FHIjshAZ75JAGJPOQ+eRpfzTkKr0qUn9dL1TBR5kpu8ZPig5/p/7OxwuVmg1dTnBsk045OJlD0WJc64Sry9fanXqtCS533VCd3fyZAAAAAt0yEOc+aNFsLSTSQtuFUleaQMauxvVRYVVh2L+UrJTUWWEO/w61g13dFmxyM8OTlYCaHJZy5enEiuLPeFPszmg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcl1VxYOa7kKDkDAvVzBZ0gAAAAACAAAAAAAQZgAAAAEAACAAAABEjI5vS0Vummg0oeCJbEmUZuuzdr4g8R8C1r499jiHsQAAAAAOgAAAAAIAACAAAACX8reQX4aZJmMAqDMDyMokPk9dxqGLqmpLtEZdQYkh/ZAAAADLb+CSCIeKtRczMULTLxK7jPmhR/BbAaCX0H8QwnKCKIZk1VRUxCRY4QAuREUFBzVWV+eLT0MzymepvCRIxcm4D+qQCxp+9XHeqdMnJWWjv+24n5eR1jrGfBuIEf3aULxll0lApSVmlcWXGffqM/ZmnG6/WYrWxvli2xnEztTGO/R1WD14g3PAZ3BDwQnaJhBAAAAArFXmRJcWRwdBYhvRq6yQPzwDIY8eL7BTrXwpgzg42Qu9aABW6i2lKf5A//ZtEeOmsLKIAJVR/uvUjLKJqC0Dog==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="Package.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="pkg_TesteUnzip.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
           <SSIS:ProjectConnectionParameters />
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="Package.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="pkg_TesteUnzip.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{8AA8682D-ACF7-4055-A87D-E293261696E2}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{3F8D229F-8FE4-486B-B556-4A2EEC5677E5}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">pkg_TesteUnzip</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{D8B927EA-7CE6-470D-A9A8-48C117B8751A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{0F3F15BE-4EF1-4F09-B430-BABCEFB4CCB1}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
