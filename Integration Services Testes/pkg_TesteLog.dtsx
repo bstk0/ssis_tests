@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="1/8/2019 10:31:34 AM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_TesteLog"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{314F0242-24FC-4D34-A33B-9A55292FAC1D}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{F8EF938A-89FE-4D4A-8C21-7BB7C09EFE40}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -123,7 +123,7 @@
   </DTS:ConnectionManagers>
   <DTS:LogProviders>
     <DTS:LogProvider
-      DTS:ConfigString="localhost.msdb"
+      DTS:ConfigString="localhost.DB_Synapse"
       DTS:CreationName="Microsoft.LogProviderSQLServer"
       DTS:Description="Writes log entries for events to a SQL Server database"
       DTS:DTSID="{D5DE4929-6699-4DC8-83D7-DF3A91F357C3}"
