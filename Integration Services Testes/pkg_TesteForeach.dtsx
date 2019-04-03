@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_TesteForeach"
   DTS:PackageType="5"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{67A814E2-F32B-4F43-AB78-BCE693997060}">
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{DA4F6BDA-8BC3-40A1-ABBB-ADFDCC6153F2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -68,6 +68,15 @@
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C8C3E444-B4BE-48F0-B04E-481B938D8294}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ErrorPath">
+      <DTS:VariableValue
+        DTS:DataType="8">E:\TEST\ERROR\</DTS:VariableValue>
+    </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{AECF5C44-2BAC-4109-9BD8-25317CD5DA73}"
@@ -130,13 +139,13 @@
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Foreach Loop Container"
+      DTS:refId="Package\Foreach Loop Container - CARROS"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Foreach Loop Container"
       DTS:DTSID="{F69D1D05-6464-4C5A-8419-9BE884F4B7E1}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Foreach Loop Container">
+      DTS:ObjectName="Foreach Loop Container - CARROS">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
         DTS:DTSID="{15F8496B-E437-4F94-8635-2F1AB5E93D9A}"
@@ -157,7 +166,7 @@
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Foreach Loop Container\Load CSV"
+          DTS:refId="Package\Foreach Loop Container - CARROS\Load CSV"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
           DTS:DTSID="{3B63F6AB-ABAA-4C48-A2E9-A320E022391C}"
@@ -171,7 +180,82 @@
               version="1">
               <components>
                 <component
-                  refId="Package\Foreach Loop Container\Load CSV\Flat File Source"
+                  refId="Package\Foreach Loop Container - CARROS\Load CSV\Derived Column"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container - CARROS\Load CSV\Derived Column.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container - CARROS\Load CSV\Derived Column.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Foreach Loop Container - CARROS\Load CSV\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\Derived Column.Outputs[Derived Column Output].Columns[drv_FileName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\Foreach Loop Container - CARROS\Load CSV\Derived Column.Outputs[Derived Column Output].Columns[drv_FileName]"
+                          name="drv_FileName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,100,1252)@[User::FileName]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,100,1252)@[User::FileName]</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container - CARROS\Load CSV\Derived Column.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Foreach Loop Container - CARROS\Load CSV\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container - CARROS\Load CSV\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container - CARROS\Load CSV\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source"
                   componentClassID="Microsoft.FlatFileSource"
                   contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
                   description="Flat File Source"
@@ -191,25 +275,25 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Foreach Loop Container\Load CSV\Flat File Source.Connections[FlatFileConnection]"
+                      refId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Connections[FlatFileConnection]"
                       connectionManagerID="Package.ConnectionManagers[Flat File Connection]"
                       connectionManagerRefId="Package.ConnectionManagers[Flat File Connection]"
                       name="FlatFileConnection" />
                   </connections>
                   <outputs>
                     <output
-                      refId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Output]"
+                      refId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Output]"
                       name="Flat File Source Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Output].Columns[carro]"
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Output].Columns[carro]"
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[carro]"
+                          externalMetadataColumnId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[carro]"
                           length="50"
-                          lineageId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Output].Columns[carro]"
+                          lineageId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Output].Columns[carro]"
                           name="carro"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -224,14 +308,14 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Output].Columns[fabrica]"
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Output].Columns[fabrica]"
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fabrica]"
+                          externalMetadataColumnId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fabrica]"
                           length="50"
-                          lineageId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Output].Columns[fabrica]"
+                          lineageId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Output].Columns[fabrica]"
                           name="fabrica"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -249,13 +333,13 @@
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[carro]"
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[carro]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="carro" />
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fabrica]"
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fabrica]"
                           codePage="1252"
                           dataType="str"
                           length="50"
@@ -263,27 +347,27 @@
                       </externalMetadataColumns>
                     </output>
                     <output
-                      refId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Error Output]"
+                      refId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Error Output]"
                       isErrorOut="true"
                       name="Flat File Source Error Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                           codePage="1252"
                           dataType="text"
                           description="Flat File Source Error Output Column"
-                          lineageId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          lineageId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                           name="Flat File Source Error Output Column" />
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          lineageId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -292,7 +376,7 @@
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Foreach Loop Container\Load CSV\OLE DB Destination"
+                  refId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
                   description="OLE DB Destination"
@@ -349,7 +433,7 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Foreach Loop Container\Load CSV\OLE DB Destination.Connections[OleDbConnection]"
+                      refId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Connections[OleDbConnection]"
                       connectionManagerID="Package.ConnectionManagers[localhost.DB_Test]"
                       connectionManagerRefId="Package.ConnectionManagers[localhost.DB_Test]"
                       description="The OLE DB runtime connection used to access the database."
@@ -357,68 +441,82 @@
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\Foreach Loop Container\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      refId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input]"
                       errorOrTruncationOperation="Insert"
                       errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Foreach Loop Container\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[carro]"
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[carro]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="carro"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[modelo]"
-                          lineageId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Output].Columns[carro]" />
+                          externalMetadataColumnId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[modelo]"
+                          lineageId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Output].Columns[carro]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[fabrica]"
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[fabrica]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="fabrica"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[fabricante]"
-                          lineageId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Output].Columns[fabrica]" />
+                          externalMetadataColumnId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[fabricante]"
+                          lineageId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Output].Columns[fabrica]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[drv_FileName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="drv_FileName"
+                          externalMetadataColumnId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FileName]"
+                          lineageId="Package\Foreach Loop Container - CARROS\Load CSV\Derived Column.Outputs[Derived Column Output].Columns[drv_FileName]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
                           dataType="i4"
                           name="id" />
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[modelo]"
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[modelo]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="modelo" />
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[fabricante]"
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[fabricante]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="fabricante" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FileName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="FileName" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\Foreach Loop Container\Load CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      refId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\Foreach Loop Container\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      synchronousInputId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Load CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Foreach Loop Container\Load CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          lineageId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Load CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          refId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Foreach Loop Container\Load CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -429,16 +527,40 @@
               </components>
               <paths>
                 <path
-                  refId="Package\Foreach Loop Container\Load CSV.Paths[Flat File Source Output]"
-                  endId="Package\Foreach Loop Container\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Foreach Loop Container - CARROS\Load CSV.Paths[Derived Column Output]"
+                  endId="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Foreach Loop Container - CARROS\Load CSV\Derived Column.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Foreach Loop Container - CARROS\Load CSV.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container - CARROS\Load CSV\Derived Column.Inputs[Derived Column Input]"
                   name="Flat File Source Output"
-                  startId="Package\Foreach Loop Container\Load CSV\Flat File Source.Outputs[Flat File Source Output]" />
+                  startId="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source.Outputs[Flat File Source Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Foreach Loop Container\Move to Loaded"
+          DTS:refId="Package\Foreach Loop Container - CARROS\Move to ERROR"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{D65E9199-4F33-42D7-BD4A-D2315E1B37F5}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Move to ERROR"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskSourcePath="User::varFileLoading"
+              TaskIsSourceVariable="True"
+              TaskDestinationPath="User::ErrorPath"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container - CARROS\Move to Loaded"
           DTS:CreationName="Microsoft.FileSystemTask"
           DTS:Description="File System Task"
           DTS:DTSID="{7A81D8AE-5589-4E1E-AFED-FA2AFBA92C95}"
@@ -457,7 +579,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Foreach Loop Container\Move to Loading"
+          DTS:refId="Package\Foreach Loop Container - CARROS\Move to Loading"
           DTS:CreationName="Microsoft.FileSystemTask"
           DTS:Description="Move to Loading"
           DTS:DTSID="{48232420-91EA-4BAA-B229-62C93C8D201D}"
@@ -478,27 +600,36 @@
       </DTS:Executables>
       <DTS:PrecedenceConstraints>
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
+          DTS:refId="Package\Foreach Loop Container - CARROS.PrecedenceConstraints[Constraint]"
           DTS:CreationName=""
           DTS:DTSID="{44949ADF-F50F-417E-B17C-71F3D87FD36B}"
-          DTS:From="Package\Foreach Loop Container\Move to Loading"
+          DTS:From="Package\Foreach Loop Container - CARROS\Move to Loading"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
-          DTS:To="Package\Foreach Loop Container\Load CSV" />
+          DTS:To="Package\Foreach Loop Container - CARROS\Load CSV" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
+          DTS:refId="Package\Foreach Loop Container - CARROS.PrecedenceConstraints[Constraint 1]"
           DTS:CreationName=""
           DTS:DTSID="{38F0CD1C-D559-447D-971C-0427D8E85491}"
-          DTS:From="Package\Foreach Loop Container\Load CSV"
+          DTS:From="Package\Foreach Loop Container - CARROS\Load CSV"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
-          DTS:To="Package\Foreach Loop Container\Move to Loaded" />
+          DTS:To="Package\Foreach Loop Container - CARROS\Move to Loaded" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container - CARROS.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{284366C7-99CD-4054-9171-9C582183AE7E}"
+          DTS:From="Package\Foreach Loop Container - CARROS\Load CSV"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Foreach Loop Container - CARROS\Move to ERROR"
+          DTS:Value="1" />
       </DTS:PrecedenceConstraints>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{DE78EEE4-9740-4F62-8D15-946922D51133}"
-          DTS:ObjectName="{DE78EEE4-9740-4F62-8D15-946922D51133}"
+          DTS:DTSID="{81C42B3D-78AC-41B1-85B6-2B24FBFDE101}"
+          DTS:ObjectName="{81C42B3D-78AC-41B1-85B6-2B24FBFDE101}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::FileName" />
       </DTS:ForEachVariableMappings>
@@ -515,17 +646,21 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Foreach Loop Container\Move to Loading"
-          TopLeft="36,23" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="124,42"
-          Id="Package\Foreach Loop Container\Load CSV"
+          Id="Package\Foreach Loop Container - CARROS\Load CSV"
           TopLeft="54,101" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Foreach Loop Container - CARROS\Move to Loaded"
+          TopLeft="50,192" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Foreach Loop Container - CARROS\Move to Loading"
+          TopLeft="36,23" />
         <EdgeLayout
-          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
+          Id="Package\Foreach Loop Container - CARROS.PrecedenceConstraints[Constraint]"
           TopLeft="115.5,65">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -546,12 +681,8 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Foreach Loop Container\Move to Loaded"
-          TopLeft="50,192" />
         <EdgeLayout
-          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
+          Id="Package\Foreach Loop Container - CARROS.PrecedenceConstraints[Constraint 1]"
           TopLeft="116,143">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -584,55 +715,133 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Foreach Loop Container - CARROS\Move to ERROR"
+          TopLeft="230,153" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container - CARROS.PrecedenceConstraints[Constraint 2]"
+          TopLeft="178,122">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52,52"
+              Start="0,0"
+              End="44.5,52">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="22,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22,0"
+                    Point2="26,0"
+                    Point3="26,4" />
+                  <mssgle:LineSegment
+                    End="26,48" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26,48"
+                    Point2="26,52"
+                    Point3="30,52" />
+                  <mssgle:LineSegment
+                    End="44.5,52" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="10.75865234375,-15.7490234375,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="266,289"
-          Size="266,332"
-          Id="Package\Foreach Loop Container"
+          PanelSize="393,289"
+          Size="393,332"
+          Id="Package\Foreach Loop Container - CARROS"
           TopLeft="143,79" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Foreach Loop Container\Load CSV">
+    design-time-name="Package\Foreach Loop Container - CARROS\Load CSV">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Foreach Loop Container\Load CSV\Flat File Source"
-          TopLeft="103,37" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="171,42"
-          Id="Package\Foreach Loop Container\Load CSV\OLE DB Destination"
+          Id="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination"
           TopLeft="106,129" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Foreach Loop Container - CARROS\Load CSV\Flat File Source"
+          TopLeft="103,37" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Foreach Loop Container - CARROS\Load CSV\Derived Column"
+          TopLeft="356,79" />
         <EdgeLayout
-          Id="Package\Foreach Loop Container\Load CSV.Paths[Flat File Source Output]"
-          TopLeft="178.5,79">
+          Id="Package\Foreach Loop Container - CARROS\Load CSV.Paths[Flat File Source Output]"
+          TopLeft="254,58">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="13,50"
+              EndConnector="102,42"
               Start="0,0"
-              End="13,42.5">
+              End="94.5,42">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21" />
+                    End="47,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21"
-                    Point2="0,25"
-                    Point3="4,25" />
+                    Point1="47,0"
+                    Point2="51,0"
+                    Point3="51,4" />
                   <mssgle:LineSegment
-                    End="9,25" />
+                    End="51,38" />
                   <mssgle:CubicBezierSegment
-                    Point1="9,25"
-                    Point2="13,25"
-                    Point3="13,29" />
+                    Point1="51,38"
+                    Point2="51,42"
+                    Point3="55,42" />
                   <mssgle:LineSegment
-                    End="13,42.5" />
+                    End="94.5,42" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container - CARROS\Load CSV.Paths[Derived Column Output]"
+          TopLeft="356,105.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-79,44.3333333333333"
+              Start="0,0"
+              End="-71.5,44.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-29.3394495412844,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-29.3394495412844,0"
+                    Point2="-33.3394495412844,0"
+                    Point3="-33.3394495412844,4" />
+                  <mssgle:LineSegment
+                    End="-33.3394495412844,40.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-33.3394495412844,40.3333333333333"
+                    Point2="-33.3394495412844,44.3333333333333"
+                    Point3="-37.3394495412844,44.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-71.5,44.3333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -645,7 +854,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach Loop Container\Load CSV\OLE DB Destination">
+    design-time-name="Package\Foreach Loop Container - CARROS\Load CSV\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
