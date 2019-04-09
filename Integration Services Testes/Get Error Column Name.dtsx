@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Get Error Column Name"
   DTS:PackageType="5"
-  DTS:VersionBuild="86"
-  DTS:VersionGUID="{B01CBE8F-585E-4BCA-8CE1-7F651EA22539}">
+  DTS:VersionBuild="100"
+  DTS:VersionGUID="{63691343-DED6-4E96-B55B-1B1A327B5B90}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -28,6 +28,16 @@
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7C5AFB59-0D23-46E2-A862-78081E881705}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ErrorComment">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{6940AC52-2465-4C60-A324-64FC9327D48E}"
@@ -2036,6 +2046,156 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </outputs>
             </component>
             <component
+              refId="Package\DFT - Move emp data 1\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Move emp data 1\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Move emp data 1\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT - Move emp data 1\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Move emp data 1\Derived Column.Outputs[Derived Column Output].Columns[drv_ErrorComment]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DFT - Move emp data 1\Derived Column.Outputs[Derived Column Output].Columns[drv_ErrorComment]"
+                      name="drv_ErrorComment"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,255,1252)"Erro de Conversão"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,255,1252)"Erro de Conversão"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Move emp data 1\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT - Move emp data 1\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Move emp data 1\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Move emp data 1\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Move emp data 1\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Move emp data 1\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Move emp data 1\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Move emp data 1\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Move emp data 1\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT - Move emp data 1\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Move emp data 1\Derived Column 1.Outputs[Derived Column Output].Columns[drv_ErrorComment]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DFT - Move emp data 1\Derived Column 1.Outputs[Derived Column Output].Columns[drv_ErrorComment]"
+                      name="drv_ErrorComment"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,255,1252)"Erro no LOAD TABLE"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,255,1252)"Erro no LOAD TABLE"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Move emp data 1\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT - Move emp data 1\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Move emp data 1\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Move emp data 1\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Move emp data 1\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Move emp data 1\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\DFT - Move emp data 1\ODD - Load emp data"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -2306,6 +2466,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       cachedName="rowCount"
                       externalMetadataColumnId="Package\DFT - Move emp data 1\ODD - Log invalid records.Inputs[OLE DB Destination Input].ExternalColumns[rowNumber]"
                       lineageId="Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[rowCount]" />
+                    <inputColumn
+                      refId="Package\DFT - Move emp data 1\ODD - Log invalid records.Inputs[OLE DB Destination Input].Columns[errorComment]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="errorComment"
+                      externalMetadataColumnId="Package\DFT - Move emp data 1\ODD - Log invalid records.Inputs[OLE DB Destination Input].ExternalColumns[errorComment]"
+                      lineageId="Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[errorComment]" />
+                    <inputColumn
+                      refId="Package\DFT - Move emp data 1\ODD - Log invalid records.Inputs[OLE DB Destination Input].Columns[rowContent]"
+                      cachedDataType="wstr"
+                      cachedLength="2500"
+                      cachedName="rowContent"
+                      externalMetadataColumnId="Package\DFT - Move emp data 1\ODD - Log invalid records.Inputs[OLE DB Destination Input].ExternalColumns[rowContent]"
+                      lineageId="Package\DFT - Move emp data 1\SC - Get error details.Outputs[Output 0].Columns[rowContent]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2357,6 +2532,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       refId="Package\DFT - Move emp data 1\ODD - Log invalid records.Inputs[OLE DB Destination Input].ExternalColumns[rowNumber]"
                       dataType="i4"
                       name="rowNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Move emp data 1\ODD - Log invalid records.Inputs[OLE DB Destination Input].ExternalColumns[fileName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="fileName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Move emp data 1\ODD - Log invalid records.Inputs[OLE DB Destination Input].ExternalColumns[errorComment]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="errorComment" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Move emp data 1\ODD - Log invalid records.Inputs[OLE DB Destination Input].ExternalColumns[rowContent]"
+                      dataType="nText"
+                      name="rowContent" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2727,6 +2918,9 @@ using System.Runtime.CompilerServices;
 #region Namespaces
 using System;
 using System.Data;
+using System.Reflection;  // Added
+using System.Xml;         // Added
+using System.IO;          // Added
 using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
 using Microsoft.SqlServer.Dts.Runtime.Wrapper;
 #endregion
@@ -2740,58 +2934,58 @@ public class ScriptMain : UserComponent
 {
     #region Help:  Using Integration Services variables and parameters
     /* To use a variable in this script, first ensure that the variable has been added to
-     * either the list contained in the ReadOnlyVariables property or the list contained in
-     * the ReadWriteVariables property of this script component, according to whether or not your
-     * code needs to write into the variable.  To do so, save this script, close this instance of
-     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
-     * Script Transformation Editor window.
-     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
-     *
-     * Example of reading from a variable or parameter:
-     *  DateTime startTime = Variables.MyStartTime;
-     *
-     * Example of writing to a variable:
-     *  Variables.myStringVariable = "new value";
-     */
+	 * either the list contained in the ReadOnlyVariables property or the list contained in
+	 * the ReadWriteVariables property of this script component, according to whether or not your
+	 * code needs to write into the variable.  To do so, save this script, close this instance of
+	 * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+	 * Script Transformation Editor window.
+	 * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+	 *
+	 * Example of reading from a variable or parameter:
+	 *  DateTime startTime = Variables.MyStartTime;
+	 *
+	 * Example of writing to a variable:
+	 *  Variables.myStringVariable = "new value";
+	 */
     #endregion
 
     #region Help:  Using Integration Services Connnection Managers
     /* Some types of connection managers can be used in this script component.  See the help topic
-     * "Working with Connection Managers Programatically" for details.
-     *
-     * To use a connection manager in this script, first ensure that the connection manager has
-     * been added to either the list of connection managers on the Connection Managers page of the
-     * script component editor.  To add the connection manager, save this script, close this instance of
-     * Visual Studio, and add the Connection Manager to the list.
-     *
-     * If the component needs to hold a connection open while processing rows, override the
-     * AcquireConnections and ReleaseConnections methods.
-     * 
-     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
-     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
-     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
-     *
-     * Example of using a File connection manager to acquire a file path:
-     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
-     *  string filePath = (string)rawConnection;
-     *
-     * Example of releasing a connection manager:
-     *  Connections.SalesDB.ReleaseConnection(rawConnection);
-     */
+	 * "Working with Connection Managers Programatically" for details.
+	 *
+	 * To use a connection manager in this script, first ensure that the connection manager has
+	 * been added to either the list of connection managers on the Connection Managers page of the
+	 * script component editor.  To add the connection manager, save this script, close this instance of
+	 * Visual Studio, and add the Connection Manager to the list.
+	 *
+	 * If the component needs to hold a connection open while processing rows, override the
+	 * AcquireConnections and ReleaseConnections methods.
+	 * 
+	 * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+	 *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+	 *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+	 *
+	 * Example of using a File connection manager to acquire a file path:
+	 *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+	 *  string filePath = (string)rawConnection;
+	 *
+	 * Example of releasing a connection manager:
+	 *  Connections.SalesDB.ReleaseConnection(rawConnection);
+	 */
     #endregion
 
     #region Help:  Firing Integration Services Events
     /* This script component can fire events.
-     *
-     * Example of firing an error event:
-     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
-     *
-     * Example of firing an information event:
-     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
-     *
-     * Example of firing a warning event:
-     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
-     */
+	 *
+	 * Example of firing an error event:
+	 *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+	 *
+	 * Example of firing an information event:
+	 *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+	 *
+	 * Example of firing a warning event:
+	 *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+	 */
     #endregion
 
     /// <summary>
@@ -2799,12 +2993,22 @@ public class ScriptMain : UserComponent
     ///
     /// You can remove this method if you don't need to do anything here.
     /// </summary>
+    /// 
+    // Variable that contains the XML document
+    StringWriter myStringWriter;
+    XmlTextWriter myXmlWriter;
+
+
+
+    // additional variables
+
+    Type rowType;
     public override void PreExecute()
     {
         base.PreExecute();
         /*
-         * Add your code here
-         */
+		 * Add your code here
+		 */
     }
 
     /// <summary>
@@ -2816,8 +3020,8 @@ public class ScriptMain : UserComponent
     {
         base.PostExecute();
         /*
-         * Add your code here
-         */
+		 * Add your code here
+		 */
     }
 
     /// <summary>
@@ -2832,6 +3036,106 @@ public class ScriptMain : UserComponent
     /// <param name="Row">The row that is currently passing through the component</param>
     public override void Input0_ProcessInputRow(Input0Buffer Row)
     {
+        // reset XML and StringWriter variables prior to use
+        myStringWriter = new StringWriter();
+        myXmlWriter = new XmlTextWriter(myStringWriter);
+
+        // Row type to get the value of a column
+        rowType = Row.GetType();
+        String columnValue = "";
+
+        // begin - creating the ROOT of doc
+        // Create a new XML document
+        // Start writing the XML document:
+        myXmlWriter.WriteStartDocument();
+
+        // Create root element <root>
+        myXmlWriter.WriteStartElement("ROOT");
+        // end - creating the ROOT of doc
+        // begin - create body of XML doc
+        // Create row element: <row>
+        myXmlWriter.WriteStartElement("ROW");
+
+        // Loop through all columns and create a column element: <col1>value</col1><col2>value</col2>
+        foreach (IDTSInputColumn100 column in this.ComponentMetaData.InputCollection[0].InputColumnCollection)
+        {
+
+            // check if column is to be ignored
+            if (
+
+              !(
+
+                (column.Name.Equals("ErrorCode", StringComparison.OrdinalIgnoreCase))
+
+                ||
+
+                (column.Name.Equals("ErrorColumn", StringComparison.OrdinalIgnoreCase))
+
+                )
+              )
+
+            {
+
+                //debugFlags += "" + Environment.NewLine + " *ADDING* column >" + column.Name + "<";
+
+                // Use the SSIS column name as element name: <col1>
+                myXmlWriter.WriteStartElement(column.Name);
+
+
+
+                // Get column value, will fail if null
+                try
+                {
+                    columnValue = rowType.GetProperty(column.Name).GetValue(Row, null).ToString();
+                }
+                catch
+                {
+                    // Default value for null values: "null", "" or null
+                    columnValue = "null";
+                }
+                finally
+                {
+
+                    myXmlWriter.WriteString(removeForbiddenXmlChars(columnValue));
+
+                }
+
+                // Close column element: </col1>
+                myXmlWriter.WriteEndElement();
+            }
+
+            //else
+            //{
+            //debugFlags += "" + Environment.NewLine + " *NOT* adding column >" + column.Name + "<";
+            //}
+        }
+
+        // Close row element: </row>
+        myXmlWriter.WriteEndElement();
+
+        // Output the number of processed rows. 103 = RowsWritten
+
+        this.ComponentMetaData.IncrementPipelinePerfCounter(103, 1);
+
+        // end - create body of XML doc
+
+        // begin - closing XML doc
+
+        // Close root element: </root>
+        myXmlWriter.WriteEndElement();
+
+        // Stop writing the XML document
+        myXmlWriter.WriteEndDocument();
+
+        // Close document
+        myXmlWriter.Close();
+
+        // end - closing XML doc
+
+
+        Row.rowContent = myStringWriter.ToString();
+
+        //
         Row.errorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);
 
         try
@@ -2842,12 +3146,17 @@ public class ScriptMain : UserComponent
                 Row.errorColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn);
             }
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             Row.errorColumnName = "Unable to fetch column name";
         }
     }
 
+    // Remove forbidden chars that could damage your XML document
+    private string removeForbiddenXmlChars(string columnValue)
+    {
+        return columnValue.Replace("&", "&amp;").Replace("<", "&lt;").Replace(">", "&gt;");
+    }
 }
 ]]></arrayElement>
                     <arrayElement
@@ -2905,11 +3214,86 @@ public class Input0Buffer: ScriptBuffer
         }
     }
 
+    public Int32 ID
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[2]);
+        }
+    }
+    public bool ID_IsNull
+    {
+        get
+        {
+            return IsNull(2);
+        }
+    }
+
+    public String EmpName
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[3]);
+        }
+    }
+    public bool EmpName_IsNull
+    {
+        get
+        {
+            return IsNull(3);
+        }
+    }
+
+    public String DOB
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[4]);
+        }
+    }
+    public bool DOB_IsNull
+    {
+        get
+        {
+            return IsNull(4);
+        }
+    }
+
+    public Int32 rowCount
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[5]);
+        }
+    }
+    public bool rowCount_IsNull
+    {
+        get
+        {
+            return IsNull(5);
+        }
+    }
+
+    public String errorComment
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[6]);
+        }
+    }
+    public bool errorComment_IsNull
+    {
+        get
+        {
+            return IsNull(6);
+        }
+    }
+
     public String errorColumnName
     {
         set
         {
-            this[2] = value;
+            this[7] = value;
         }
     }
     public bool errorColumnName_IsNull
@@ -2918,7 +3302,7 @@ public class Input0Buffer: ScriptBuffer
         {
             if (value)
             {
-                SetNull(2);
+                SetNull(7);
             }
             else
             {
@@ -2931,7 +3315,7 @@ public class Input0Buffer: ScriptBuffer
     {
         set
         {
-            this[3] = value;
+            this[8] = value;
         }
     }
     public bool errorDescription_IsNull
@@ -2940,7 +3324,29 @@ public class Input0Buffer: ScriptBuffer
         {
             if (value)
             {
-                SetNull(3);
+                SetNull(8);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String rowContent
+    {
+        set
+        {
+            this[9] = value;
+        }
+    }
+    public bool rowContent_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(9);
             }
             else
             {
@@ -3054,7 +3460,7 @@ public class Variables
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{e7b51de1-25ff-4340-98e0-31d06dc8a0cb}</ProjectGuid>
+    <ProjectGuid>{E7B51DE1-25FF-4340-98E0-31D06DC8A0CB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SC_a676710decc048d283117434eb8bd6ab</RootNamespace>
@@ -3124,8 +3530,8 @@ public class Variables
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
-        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
-        <Host Name="ScriptComponent" GeneratedNamespace="SC_a676710decc048d283117434eb8bd6ab" IconIndex="0"></Host>
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptComponent" IconIndex="0" />
         <ProjectClient>
           <HostIdentifier>SSIS_SC140</HostIdentifier>
         </ProjectClient>
@@ -3144,7 +3550,7 @@ public class Variables
     <msb:CodeName>SC_a676710decc048d283117434eb8bd6ab</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_a676710decc048d283117434eb8bd6ab</msb:DisplayName>
-    <msb:ProjectId>{386CD333-BC7E-484D-9777-8F618AECA723}</msb:ProjectId>
+    <msb:ProjectId>{C1B5EBEE-7198-49FD-9533-35CED4A330AB}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_a676710decc048d283117434eb8bd6ab.csproj" />
@@ -3156,6 +3562,18 @@ public class Variables
     <msb:File Include="Properties\Settings.settings" />
     <msb:File Include="Properties\AssemblyInfo.cs" />
     <msb:File Include="Properties\Resources.resx" />
+    <msb:Breakpoint Include="0897240d81a54a4e9d657ecc0bb6bf4e">
+      <msb:FileName>main.cs</msb:FileName>
+      <msb:LineNumber>151</msb:LineNumber>
+      <msb:ColumnNumber>9</msb:ColumnNumber>
+      <msb:Enabled>True</msb:Enabled>
+      <msb:ConditionType>1</msb:ConditionType>
+      <msb:Condition>
+      </msb:Condition>
+      <msb:Language>C#</msb:Language>
+      <msb:HitCountType>1</msb:HitCountType>
+      <msb:HitCountTarget>1</msb:HitCountTarget>
+    </msb:Breakpoint>
   </msb:ItemGroup>
 </c:Project>]]></arrayElement>
                     <arrayElement
@@ -3290,112 +3708,184 @@ namespace SC_a676710decc048d283117434eb8bd6ab.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[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
-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
+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
-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
+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
-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
-AADzA/QAAADzBPgAAAAlBPQAAACIB/AAAACtBfwAAACLAQEBAABOBwYBAgAGAAMAAgAHAAUAAgAI
-AAcAAgAJAAkAAQAKAAsAAQALAA0AAQAMAA8AAQANABEAAgAWABMAAgAYABUAAgAZABcAAQAaABcA
-AgAbABkABIAAAAEAAAAAAAAAAAAAAAAAuAAAAAQAAAAAAAAAAAAAAI4A3AAAAAAADgAAAAAAAAAA
-AAAAlwCRBwAAAAAOAAAAAAAAAAAAAACXAFwFAAAAAA4AAAAAAAAAAAAAAJcArgcAAAAABAAAAAAA
-AAAAAAAAjgBXBAAAAAAOAAAAAAAAAAAAAACXADkFAAAAAAAAAAABAAAAXwYAAAAAAAAASURUU0Nv
-bXBvbmVudE1ldGFEYXRhMTAwAElEVFNWYXJpYWJsZTEwMABJRFRTVmFyaWFibGVzMTAwAElEVFNF
-dmFsdWF0b3JDb250ZXh0MTAwAElEVFNDb21wb25lbnRNZXRhRGF0YTEzMABHZXRJbnQzMgA8TW9k
-dWxlPgBJbnB1dElEAEdldElkZW50aWZpY2F0aW9uU3RyaW5nQnlJRABnZXRfQ29tcG9uZW50TWV0
-YURhdGEAU0NfYTY3NjcxMGRlY2MwNDhkMjgzMTE3NDM0ZWI4YmQ2YWIAbXNjb3JsaWIAZGVmYXVs
-dEluc3RhbmNlAGdldF9FcnJvckNvZGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5k
-bGUAc2V0X2Vycm9yQ29sdW1uTmFtZQBJbnB1dE5hbWUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMu
-UGlwZWxpbmUAVHlwZQBnZXRfQ3VsdHVyZQBzZXRfQ3VsdHVyZQByZXNvdXJjZUN1bHR1cmUAQXBw
-bGljYXRpb25TZXR0aW5nc0Jhc2UARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0
-ZWRBdHRyaWJ1dGUARGVidWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmli
-dXRlAEVkaXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2Vt
-Ymx5VHJhZGVtYXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNv
-bmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxh
-dGlvblJlbGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJs
-eUNvcHlyaWdodEF0dHJpYnV0ZQBTU0lTU2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0
-ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUA
-UHJlRXhlY3V0ZQBQb3N0RXhlY3V0ZQB2YWx1ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAFN0
-cmluZwBTeXN0ZW0uQ29tcG9uZW50TW9kZWwAU0NfYTY3NjcxMGRlY2MwNDhkMjgzMTE3NDM0ZWI4
-YmQ2YWIuZGxsAGdldF9FcnJvckNvZGVfSXNOdWxsAHNldF9lcnJvckNvbHVtbk5hbWVfSXNOdWxs
-AGdldF9FcnJvckNvbHVtbl9Jc051bGwAc2V0X2Vycm9yRGVzY3JpcHRpb25fSXNOdWxsAFNldE51
-bGwAZ2V0X0l0ZW0Ac2V0X0l0ZW0AU3lzdGVtAHJlc291cmNlTWFuAFNjcmlwdE1haW4AZ2V0X0Vy
-cm9yQ29sdW1uAFN5c3RlbS5Db25maWd1cmF0aW9uAFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3Rl
-bS5SZWZsZWN0aW9uAEludmFsaWRPcGVyYXRpb25FeGNlcHRpb24AR2V0RXJyb3JEZXNjcmlwdGlv
-bgBzZXRfZXJyb3JEZXNjcmlwdGlvbgBTdHJpbmdDb21wYXJpc29uAEN1bHR1cmVJbmZvAE91dHB1
-dE5hbWVNYXAAT3V0cHV0TWFwAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRFRTUnVudGltZVdyYXAATWlj
-cm9zb2Z0LlNxbFNlcnZlci5EVFNQaXBlbGluZVdyYXAASW5wdXQwQnVmZmVyAFBpcGVsaW5lQnVm
-ZmVyAFNjcmlwdEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAE1pY3Jvc29mdC5TcWxTZXJ2ZXIu
-RHRzLlJ1bnRpbWUuV3JhcHBlcgBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5QaXBlbGluZS5XcmFw
-cGVyAC5jdG9yAC5jY3RvcgBTeXN0ZW0uRGlhZ25vc3RpY3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGls
-ZXJTZXJ2aWNlcwBTeXN0ZW0uUmVzb3VyY2VzAFNDX2E2NzY3MTBkZWNjMDQ4ZDI4MzExNzQzNGVi
-OGJkNmFiLlByb3BlcnRpZXMuUmVzb3VyY2VzLnJlc291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTQ19h
-Njc2NzEwZGVjYzA0OGQyODMxMTc0MzRlYjhiZDZhYi5Qcm9wZXJ0aWVzAGdldF9SZWFkT25seVZh
-cmlhYmxlcwBCdWZmZXJDb2x1bW5JbmRleGVzAEdldENvbHVtbkluZGV4ZXMAU2V0dGluZ3MARXF1
-YWxzAENvbm5lY3Rpb25zAE9iamVjdABFbmRPZlJvd3NldABnZXRfRGVmYXVsdABVc2VyQ29tcG9u
-ZW50AFBhcmVudENvbXBvbmVudABTY3JpcHRDb21wb25lbnQAZ2V0X1Jvd0NvdW50AE1pY3Jvc29m
-dC5TcWxTZXJ2ZXIuVHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5QaXBlbGluZUhvc3QASW5w
-dXQwX1Byb2Nlc3NJbnB1dABHZXRWYWx1ZVdpdGhDb250ZXh0AFNjcmlwdENvbXBvbmVudEV2YWxD
-b250ZXh0AGdldF9FdmFsdWF0b3JDb250ZXh0AElucHV0MF9Qcm9jZXNzSW5wdXRSb3cATmV4dFJv
-dwBnZXRfQXNzZW1ibHkAAAA3VQBuAGEAYgBsAGUAIAB0AG8AIABmAGUAdABjAGgAIABjAG8AbAB1
-AG0AbgAgAG4AYQBtAGUAAICbSQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEAbgBu
-AG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAgAGEA
-IAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEAZAAu
-AAAPSQBuAHAAdQB0ACAAMAAAEVIAbwB3AEMAbwB1AG4AdAAAcVMAQwBfAGEANgA3ADYANwAxADAA
-ZABlAGMAYwAwADQAOABkADIAOAAzADEAMQA3ADQAMwA0AGUAYgA4AGIAZAA2AGEAYgAuAFAAcgBv
-AHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAAAAdgM1WB5AYRJcYoflb1+ucAAQg
-AQEIAyAAAQUgAQEREQQgAQEOBSABARFhBAcBEjkEIAAScQQgAQ4ICSADARJFHQgSSQMGEkUDBh0I
-BCABCAgEIAECCAUgAgEIHAMgAAIGIAICDhF9BSABHQgIBSAAEoCBBiABEoCFHAUAABKAiQYgARwS
-gI0IAAESgJURgJkFIAASgJ0HIAIBDhKAnQi3elxWGTTgiQiJhF3NgIDMkQMGEhQDBhIYAwYSTQMG
-ElkDBhJdAwYSIAUgAQESDAMgAAgEIAEBAgkgBAEIDhJFEkkFIAEBEk0EAAASWQQAABJdBQABARJd
-BAAAEiADAAABAygACAMoAAIDKAAOBAgAElkECAASXQQIABIgCAEACAAAAAAAHgEAAQBUAhZXcmFw
-Tm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTQ19hNjc2NzEwZGVjYzA0OGQyODMxMTc0
-MzRlYjhiZDZhYgAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDE2AABJAQAaLk5FVEZyYW1ld29y
-ayxWZXJzaW9uPXY0LjUBAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEi5ORVQgRnJhbWV3b3JrIDQu
-NQQBAAAAAAAAtAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVy
-LCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRv
-a2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQC
-AAAAAAAAAAAAAABQQURQQURQtAAAANg1AAAAAAAAAAAAAPI1AAAAIAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAADkNQAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAVB4AAAAgAAAAIAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAiAAAAAAAAAAAAAAAAAABAAABA
+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
+SQACCBAAUQACCBAAWQACCBAAYQACCBAAaQACCAYA2QACCAYA+QACCBUACQECCAYA0QANBAYA0QAY
+BAYAcQACCAYAeQACCCcAqQD8AS4AGQG5CQYAGQGFCRAA0QAPATMAIQE0BjkAKQGeBT8AOQEaBkYA
+QQH0B0wAiQD6CVEAkQCoAVUASQEYCVkAgQD6CmEAWQEwBGgAqQBlBFUAGQFZBBAAGQF1CQYAiQCB
+Cm8AmQBSAgYAIQHLB3MAGQGoCQYAGQFMAgYAIQFiBnkAoQDpAHkASQFSAX4AuQACCIQAuQA2B44A
+uQDqCJIAwQDAAJYAuQCEBZsAwQBuBHkAuQCnBaAAuQCLBQEAYQECCBAAuQDlCm8AuQBdCW8A0QAC
+CAYA0QD+CKYAqQACCAYA0QDUCKwAaQGeBbIA0QC5CrkAcQGKCr8AgQCWAcYAgQDtCs4A4QACCNQA
+AQECCAYALgALAGoBLgATAHMBLgAbAJIBLgAjAJsBLgArAMQBLgAzAMQBLgA7AMQBLgBDAJsBLgBL
+AMoBLgBTAMQBLgBbAOEBQwBjACsC4wBrACsCQQF7ACsCyQJzAJIB6QJzAJIBGwADAAEABgAVAAcA
+FgAIABgAAABuAU8BAADXBFMBAADSBU8BAAAaBVMBAAACAU8BAADJBFMBAADJAVcBAAAHBVMBAADW
+AFcBAAC6BFMBAAAmCk8BAAB7BVMBAACbCVcBAABNBVMBAAC1AVcBAADsBFMBAAB6BlcBAAAxBVMB
+AAAKClcBAABlBVMBAAAZCk8BAABBB1sBAAAsAmABAABtCWUBAgAHAAMAAgAIAAUAAgAJAAcAAgAK
+AAkAAgALAAsAAgAMAA0AAgANAA8AAgAOABEAAgAPABMAAgAQABUAAgARABcAAgASABkAAgATABsA
+AgAUAB0AAQAVAB8AAQAWACEAAQAXACMAAQAYACUAAQAZACcAAQAaACkAAgAjACsAAgAlAC0AAgAm
+AC8AAQAnAC8AAgAoADEABIAAAAEAAAAAAAAAAAAAAAAAJQEAAAQAAAAAAAAAAAAAANwASQEAAAAA
+DgAAAAAAAAAAAAAA5QAvCgAAAAAEAAAAAAAAAAAAAADcAJMFAAAAAA4AAAAAAAAAAAAAAOUA8AYA
+AAAADgAAAAAAAAAAAAAA5QBMCgAAAAAEAAAAAAAAAAAAAADcALAFAAAAAA4AAAAAAAAAAAAAAOUA
+zQYAAAAAAAAAAAEAAABTCAAAAAAASURUU0NvbXBvbmVudE1ldGFEYXRhMTAwAElEVFNWYXJpYWJs
+ZTEwMABJRFRTSW5wdXRDb2x1bW4xMDAASURUU0lucHV0Q29sdW1uQ29sbGVjdGlvbjEwMABJRFRT
+SW5wdXRDb2xsZWN0aW9uMTAwAElEVFNWYXJpYWJsZXMxMDAASURUU0lucHV0MTAwAElEVFNFdmFs
+dWF0b3JDb250ZXh0MTAwAElEVFNDb21wb25lbnRNZXRhRGF0YTEzMABHZXRJbnQzMgA8TW9kdWxl
+PgBnZXRfRE9CAGdldF9JRABJbnB1dElEAEdldElkZW50aWZpY2F0aW9uU3RyaW5nQnlJRABTeXN0
+ZW0uSU8AZ2V0X0NvbXBvbmVudE1ldGFEYXRhAFNDX2E2NzY3MTBkZWNjMDQ4ZDI4MzExNzQzNGVi
+OGJkNmFiAG1zY29ybGliAFJlcGxhY2UAZGVmYXVsdEluc3RhbmNlAGdldF9FcnJvckNvZGUASURp
+c3Bvc2FibGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUAZ2V0X05hbWUAc2V0
+X2Vycm9yQ29sdW1uTmFtZQBnZXRfRW1wTmFtZQBJbnB1dE5hbWUATWljcm9zb2Z0LlNxbFNlcnZl
+ci5EdHMuUGlwZWxpbmUAR2V0VHlwZQByb3dUeXBlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJl
+c291cmNlQ3VsdHVyZQBBcHBsaWNhdGlvblNldHRpbmdzQmFzZQBDbG9zZQBEaXNwb3NlAEVkaXRv
+ckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVnZ2VyTm9uVXNl
+ckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVBdHRyaWJ1
+dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBUYXJn
+ZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmlidXRlAEFzc2Vt
+Ymx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBB
+c3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAU1NJU1Nj
+cmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0cmlidXRl
+AFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAUG9zdEV4ZWN1dGUAY29s
+dW1uVmFsdWUAR2V0VmFsdWUAdmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBXcml0ZVN0
+cmluZwBUb1N0cmluZwBHZXRTdHJpbmcAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFNDX2E2NzY3MTBk
+ZWNjMDQ4ZDI4MzExNzQzNGViOGJkNmFiLmRsbABnZXRfRE9CX0lzTnVsbABnZXRfSURfSXNOdWxs
+AGdldF9FcnJvckNvZGVfSXNOdWxsAHNldF9lcnJvckNvbHVtbk5hbWVfSXNOdWxsAGdldF9FbXBO
+YW1lX0lzTnVsbABnZXRfRXJyb3JDb2x1bW5fSXNOdWxsAHNldF9lcnJvckRlc2NyaXB0aW9uX0lz
+TnVsbABnZXRfZXJyb3JDb21tZW50X0lzTnVsbABzZXRfcm93Q29udGVudF9Jc051bGwAZ2V0X3Jv
+d0NvdW50X0lzTnVsbABTZXROdWxsAFN5c3RlbS5YbWwAZ2V0X0l0ZW0Ac2V0X0l0ZW0AU3lzdGVt
+AHJlc291cmNlTWFuAFNjcmlwdE1haW4AZ2V0X0Vycm9yQ29sdW1uAFN5c3RlbS5Db25maWd1cmF0
+aW9uAFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0aW9uAGdldF9JbnB1dENvbHVt
+bkNvbGxlY3Rpb24AZ2V0X0lucHV0Q29sbGVjdGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9u
+AEdldEVycm9yRGVzY3JpcHRpb24Ac2V0X2Vycm9yRGVzY3JpcHRpb24AU3RyaW5nQ29tcGFyaXNv
+bgBDdWx0dXJlSW5mbwBQcm9wZXJ0eUluZm8AT3V0cHV0TmFtZU1hcABPdXRwdXRNYXAATWljcm9z
+b2Z0LlNxbFNlcnZlci5EVFNSdW50aW1lV3JhcABNaWNyb3NvZnQuU3FsU2VydmVyLkRUU1BpcGVs
+aW5lV3JhcABJbnB1dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNv
+dXJjZU1hbmFnZXIATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUnVudGltZS5XcmFwcGVyAE1pY3Jv
+c29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lLldyYXBwZXIAbXlTdHJpbmdXcml0ZXIAbXlYbWxX
+cml0ZXIAWG1sVGV4dFdyaXRlcgBJbmNyZW1lbnRQaXBlbGluZVBlcmZDb3VudGVyAElFbnVtZXJh
+dG9yAEdldEVudW1lcmF0b3IALmN0b3IALmNjdG9yAFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0u
+UnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5SZXNvdXJjZXMAU0NfYTY3NjcxMGRlY2Mw
+NDhkMjgzMTE3NDM0ZWI4YmQ2YWIuUHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERlYnVn
+Z2luZ01vZGVzAFNDX2E2NzY3MTBkZWNjMDQ4ZDI4MzExNzQzNGViOGJkNmFiLlByb3BlcnRpZXMA
+Z2V0X1JlYWRPbmx5VmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMAR2V0Q29sdW1uSW5kZXhl
+cwBTZXR0aW5ncwBFcXVhbHMAU3lzdGVtLkNvbGxlY3Rpb25zAENvbm5lY3Rpb25zAHJlbW92ZUZv
+cmJpZGRlblhtbENoYXJzAE9iamVjdABFbmRPZlJvd3NldABnZXRfRGVmYXVsdABXcml0ZUVuZEVs
+ZW1lbnQAV3JpdGVTdGFydEVsZW1lbnQAZ2V0X2Vycm9yQ29tbWVudABXcml0ZUVuZERvY3VtZW50
+AFdyaXRlU3RhcnREb2N1bWVudABVc2VyQ29tcG9uZW50AFBhcmVudENvbXBvbmVudABTY3JpcHRD
+b21wb25lbnQAZ2V0X0N1cnJlbnQAc2V0X3Jvd0NvbnRlbnQAZ2V0X1Jvd0NvdW50AGdldF9yb3dD
+b3VudABNaWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuUGlw
+ZWxpbmVIb3N0AElucHV0MF9Qcm9jZXNzSW5wdXQATW92ZU5leHQAR2V0VmFsdWVXaXRoQ29udGV4
+dABTY3JpcHRDb21wb25lbnRFdmFsQ29udGV4dABnZXRfRXZhbHVhdG9yQ29udGV4dABJbnB1dDBf
+UHJvY2Vzc0lucHV0Um93AE5leHRSb3cAZ2V0X0Fzc2VtYmx5AEdldFByb3BlcnR5AAAAAAEACVIA
+TwBPAFQAAAdSAE8AVwAAE0UAcgByAG8AcgBDAG8AZABlAAAXRQByAHIAbwByAEMAbwBsAHUAbQBu
+AAAJbgB1AGwAbAAAN1UAbgBhAGIAbABlACAAdABvACAAZgBlAHQAYwBoACAAYwBvAGwAdQBtAG4A
+IABuAGEAbQBlAAADJgAACyYAYQBtAHAAOwAAAzwAAAkmAGwAdAA7AAADPgAACSYAZwB0ADsAAICb
+SQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0
+ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8A
+IAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEAZAAuAAAPSQBuAHAAdQB0ACAAMAAA
+EVIAbwB3AEMAbwB1AG4AdAAAcVMAQwBfAGEANgA3ADYANwAxADAAZABlAGMAYwAwADQAOABkADIA
+OAAzADEAMQA3ADQAMwA0AGUAYgA4AGIAZAA2AGEAYgAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBS
+AGUAcwBvAHUAcgBjAGUAcwAAm9bfCAuWj0GBnGzgE8h/ZgAEIAEBCAMgAAEFIAEBEREEIAEBDgUg
+AQEReQsHBQ4SRRJJEk0SUQYgAQESgIkEIAASQQUgABKAkQUgABKAlQYgARKAnRwFIAASgKEEIAAS
+RQMgABwDIAAOByACAg4RgKkGIAESgK0OBiACHBwdHAMgAAIFIAIBCQkEIAEOCAUgAg4ODgkgAwES
+YR0IEmUDBhJhAwYdCAQgAQgIBCABAggFIAIBCBwFIAEdCAgFIAASgLUGIAESgLkcBQAAEoC9BiAB
+HBKAwQcAARJBEYDFBSAAEoDJByACAQ4SgMkIt3pcVhk04IkIiYRdzYCAzJEDBhI5AwYSPQMGEkED
+BhIUAwYSGAMGEmkDBhJxAwYSdQMGEiAFIAEBEgwEIAEODgMgAAgEIAEBAgkgBAEIDhJhEmUFIAEB
+EmkEAAAScQQAABJ1BQABARJ1BAAAEiADAAABAygACAMoAAIDKAAOBAgAEnEECAASdQQIABIgCAEA
+CAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTQ19hNjc2
+NzEwZGVjYzA0OGQyODMxMTc0MzRlYjhiZDZhYgAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDE2
+AABJAQAaLk5FVEZyYW1ld29yayxWZXJzaW9uPXY0LjUBAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1l
+Ei5ORVQgRnJhbWV3b3JrIDQuNQQBAAAAtAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2Vz
+LlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRy
+YWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50
+aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAACQ+AAAAAAAAAAAAAD4+AAAAIAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAwPgAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxs
+AAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQ
+AAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAASAAAAFhA
+AADsAwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAAAAAAvQTv
+/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQAAAABAFYA
+YQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBuAAAAAAAA
+ALAETAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAAMAAwADQA
+YgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBuAHkATgBh
+AG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAAAABTAEMA
+XwBhADYANwA2ADcAMQAwAGQAZQBjAGMAMAA0ADgAZAAyADgAMwAxADEANwA0ADMANABlAGIAOABi
+AGQANgBhAGIAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4AMAAuADAA
+AABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfAGEANgA3ADYANwAxADAAZABl
+AGMAYwAwADQAOABkADIAOAAzADEAMQA3ADQAMwA0AGUAYgA4AGIAZAA2AGEAYgAuAGQAbABsAAAA
+SAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBoAHQAIABA
+ACAAIAAyADAAMQA2AAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMAAAAAAAAA
+AAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8AYQA2ADcANgA3
+ADEAMABkAGUAYwBjADAANAA4AGQAMgA4ADMAMQAxADcANAAzADQAZQBiADgAYgBkADYAYQBiAC4A
+ZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfAGEANgA3ADYANwAx
+ADAAZABlAGMAYwAwADQAOABkADIAOAAzADEAMQA3ADQAMwA0AGUAYgA4AGIAZAA2AGEAYgAAADQA
+CAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4AAgAAQBB
+AHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAUD4AAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -3404,43 +3894,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgA
-AABYQAAA7AMAAAAAAAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAA
-AL0E7/4AAAEAAAABAAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAA
-AQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAA
-AAAAAACwBEwDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAwADAA
-MAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEAbgB5
-AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAA
-UwBDAF8AYQA2ADcANgA3ADEAMABkAGUAYwBjADAANAA4AGQAMgA4ADMAMQAxADcANAAzADQAZQBi
-ADgAYgBkADYAYQBiAAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADAA
-LgAwAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwBhADYANwA2ADcAMQAw
-AGQAZQBjAGMAMAA0ADgAZAAyADgAMwAxADEANwA0ADMANABlAGIAOABiAGQANgBhAGIALgBkAGwA
-bAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcAaAB0
-ACAAQAAgACAAMgAwADEANgAAACoAAQABAEwAZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBzAAAA
-AAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfAGEANgA3
-ADYANwAxADAAZABlAGMAYwAwADQAOABkADIAOAAzADEAMQA3ADQAMwA0AGUAYgA4AGIAZAA2AGEA
-YgAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAEMAXwBhADYANwA2
-ADcAMQAwAGQAZQBjAGMAMAA0ADgAZAAyADgAMwAxADEANwA0ADMANABlAGIAOABiAGQANgBhAGIA
-AAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAOAAI
-AAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAAAQ2AAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   </arrayElements>
                 </property>
                 <property
@@ -3470,7 +3924,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   name="BreakpointCollection"
                   typeConverter="NOTBROWSABLE">
                   <arrayElements
-                    arrayElementCount="0" />
+                    arrayElementCount="1">
+                    <arrayElement
+                      dataType="System.String">&lt;SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"&gt;
+&lt;SOAP-ENV:Body&gt;
+&lt;a1:ScriptBreakpointInfo id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Microsoft.SqlServer.VSTAHosting/Microsoft.SqlServer.VSTAScriptingLib%2C%20Version%3D14.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3D89845dcd8080cc91"&gt;
+&lt;Enabled&gt;true&lt;/Enabled&gt;
+&lt;File id="ref-3"&gt;main.cs&lt;/File&gt;
+&lt;FileLine&gt;151&lt;/FileLine&gt;
+&lt;FileColumn&gt;9&lt;/FileColumn&gt;
+&lt;/a1:ScriptBreakpointInfo&gt;
+&lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+</arrayElement>
+                  </arrayElements>
                 </property>
                 <property
                   dataType="System.String"
@@ -3489,7 +3956,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   dataType="System.String"
                   description="Checksum to match component metedata against compiled codes."
                   name="MetadataChecksum140"
-                  typeConverter="NOTBROWSABLE">81</property>
+                  typeConverter="NOTBROWSABLE">79</property>
               </properties>
               <inputs>
                 <input
@@ -3507,6 +3974,37 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedDataType="i4"
                       cachedName="ErrorColumn"
                       lineageId="Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[ErrorColumn]" />
+                    <inputColumn
+                      refId="Package\DFT - Move emp data 1\SC - Get error details.Inputs[Input 0].Columns[ID]"
+                      cachedDataType="i4"
+                      cachedName="ID"
+                      lineageId="Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\DFT - Move emp data 1\SC - Get error details.Inputs[Input 0].Columns[EmpName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="EmpName"
+                      lineageId="Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[EmpName]" />
+                    <inputColumn
+                      refId="Package\DFT - Move emp data 1\SC - Get error details.Inputs[Input 0].Columns[DOB]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DOB"
+                      lineageId="Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[DOB]" />
+                    <inputColumn
+                      refId="Package\DFT - Move emp data 1\SC - Get error details.Inputs[Input 0].Columns[rowCount]"
+                      cachedDataType="i4"
+                      cachedName="rowCount"
+                      lineageId="Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[rowCount]" />
+                    <inputColumn
+                      refId="Package\DFT - Move emp data 1\SC - Get error details.Inputs[Input 0].Columns[errorComment]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="errorComment"
+                      lineageId="Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[errorComment]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -3531,6 +4029,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       length="4000"
                       lineageId="Package\DFT - Move emp data 1\SC - Get error details.Outputs[Output 0].Columns[errorDescription]"
                       name="errorDescription" />
+                    <outputColumn
+                      refId="Package\DFT - Move emp data 1\SC - Get error details.Outputs[Output 0].Columns[rowContent]"
+                      dataType="wstr"
+                      length="2500"
+                      lineageId="Package\DFT - Move emp data 1\SC - Get error details.Outputs[Output 0].Columns[rowContent]"
+                      name="rowContent" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -3939,6 +4443,28 @@ public class Input0Buffer: ScriptBuffer
         }
     }
 
+    public String errorComment
+    {
+        set
+        {
+            this[1] = value;
+        }
+    }
+    public bool errorComment_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(1);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
     new public bool NextRow()
     {
         return base.NextRow();
@@ -4067,7 +4593,7 @@ namespace SC_aa1b631db43b4442b4558f0b8a1235cb.Properties {
     <msb:CodeName>SC_aa1b631db43b4442b4558f0b8a1235cb</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_aa1b631db43b4442b4558f0b8a1235cb</msb:DisplayName>
-    <msb:ProjectId>{2E6C23D7-7D93-4616-A5C2-24519A0CE929}</msb:ProjectId>
+    <msb:ProjectId>{7B952D3F-A1A9-401E-9C0A-5BB43E074A9B}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_aa1b631db43b4442b4558f0b8a1235cb.csproj" />
@@ -4234,102 +4760,102 @@ using System.Runtime.CompilerServices;
                     <arrayElement
                       dataType="System.String"><![CDATA[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
-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
+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
-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
+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
-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
+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
-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
+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
-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
-BYUABgCZBYkAAQARBo0AAQARBo0AEQCQA5EAEQD6AJUAEQB+AJkAUCAAAAAAxgDVAgYAAQBfIAAA
-AADGAOACBgABAGcgAAAAAMYA+AadAAEAgyAAAAAAhhi6BAYAAgCLIAAAAACGGLoEGwACAJYgAAAA
-AIYIVQYBAAUApSAAAAAAhghbA6MABgC8IAAAAACGAA8HKwAHAMQgAAAAAIYA6wUrAAcAzCAAAAAA
-hhi6BAYABwDsIAAAAADGAKcGqAAHABEhAAAAAMYBoAadAAsAJCEAAAAAxgH4Bp0ADAAmIQAAAACG
-GLoEsgANADUhAAAAAIYYugSyAA4ARCEAAAAAhggxBrgADwBqIQAAAACGCD4GAQAPAIwhAAAAAIMY
-ugQGABAAlCEAAAAAkwh+BLwAEADAIQAAAACTCOIAwQAQAMchAAAAAJMI7gDGABAAzyEAAAAAlgj3
-BcwAEQDWIQAAAACGGLoEBgARAN4hAAAAAJEYwATRABEAAAABABMHAAABAHcEAAACAKMFAAADACgE
-AAABAPYCAAABAPYCAAABAEkAAAACALIAAAADAHcEAAAEACgEAAABAHcEAAABABMHAAABACcGAAAB
-ACcGAAABAPYCAAABAPYCCQC6BAEAEQC6BAYAGQC6BAoAKQC6BBAAMQC6BBAAOQC6BBAAQQC6BBAA
-SQC6BBAAUQC6BBAAWQC6BBAAYQC6BBAAaQC6BAYAmQC6BAYAuQC6BBUAyQC6BAYAiQDVAgYAiQDg
-AgYAcQC6BBsAcQCAAyUAcQBvAwEA2QC6BBAAcQAPBysAcQDrBSsAiQC6BAYA4QDRBS8AiQC3BTYA
-kQC6BAYAiQCMBTwA8QB3A0EAiQDjBkcA+QC0Bk0A+QDsAlQAEQGgAFkAEQEXB2IAoQC6BGgAwQC6
-BAYALgALAOwALgATAPUALgAbABQBLgAjAB0BLgArAEYBLgAzAEYBLgA7AEYBLgBDAB0BLgBLAEwB
-LgBTAEYBLgBbAGMBQwBjAK0BiQBzABQBqQBzABQB4wBrAK0BAQF7AK0BAwABAAYAAwAHAAQACAAG
-AAAAWQbVAAAAXwPZAAAATAbVAAAAggTdAAAAAgHiAAAA+wXnAAEABgADAAEABwAFAAIAEAAHAAEA
-EQAHAAIAEwAJAAIAFAALAAEAFQALAAIAFgANAASAAAABAAAAAAAAAAAAAAAAAFEAAAAEAAAAAAAA
-AAAAAABwAHUAAAAAAA4AAAAAAAAAAAAAAHkAYgYAAAAADgAAAAAAAAAAAAAAeQB/BgAAAAAEAAAA
-AAAAAAAAAABwAIkDAAAAAA4AAAAAAAAAAAAAAHkAMgQAAAAAAAAAAAEAAAALBQAAAAAAAABJRFRT
-VmFyaWFibGUxMDAASURUU1ZhcmlhYmxlczEwMABJRFRTRXZhbHVhdG9yQ29udGV4dDEwMABJbnQz
-MgA8TW9kdWxlPgBJbnB1dElEAFNDX2FhMWI2MzFkYjQzYjQ0NDJiNDU1OGYwYjhhMTIzNWNiAG1z
-Y29ybGliAGRlZmF1bHRJbnN0YW5jZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRs
-ZQBJbnB1dE5hbWUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUAVHlwZQBnZXRfQ3Vs
-dHVyZQBzZXRfQ3VsdHVyZQByZXNvdXJjZUN1bHR1cmUAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UA
-RWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVidWdnZXJO
-b25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dzYWJsZUF0
-dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0cmlidXRl
-AFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRyaWJ1dGUA
-QXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmli
-dXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJpYnV0ZQBT
-U0lTU2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRy
-aWJ1dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0RXhlY3V0
-ZQBzZXRfVmFsdWUAdmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBTdHJpbmcAU3lzdGVt
-LkNvbXBvbmVudE1vZGVsAFNDX2FhMWI2MzFkYjQzYjQ0NDJiNDU1OGYwYjhhMTIzNWNiLmRsbABz
-ZXRfcm93Q291bnRfSXNOdWxsAFNldE51bGwAZ2V0X0l0ZW0Ac2V0X0l0ZW0AU3lzdGVtAHJlc291
-cmNlTWFuAFNjcmlwdE1haW4AU3lzdGVtLkNvbmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRp
-b24AU3lzdGVtLlJlZmxlY3Rpb24ASW52YWxpZE9wZXJhdGlvbkV4Y2VwdGlvbgBTdHJpbmdDb21w
-YXJpc29uAEN1bHR1cmVJbmZvAE91dHB1dE5hbWVNYXAAT3V0cHV0TWFwAE1pY3Jvc29mdC5TcWxT
-ZXJ2ZXIuRFRTUnVudGltZVdyYXAASW5wdXQwQnVmZmVyAFBpcGVsaW5lQnVmZmVyAFNjcmlwdEJ1
-ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlJ1bnRpbWUu
-V3JhcHBlcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdub3N0aWNzAFN5c3RlbS5SdW50aW1lLkNv
-bXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBTQ19hYTFiNjMxZGI0M2I0NDQyYjQ1NThm
-MGI4YTEyMzVjYi5Qcm9wZXJ0aWVzLlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMA
-U0NfYWExYjYzMWRiNDNiNDQ0MmI0NTU4ZjBiOGExMjM1Y2IuUHJvcGVydGllcwBnZXRfUmVhZFdy
-aXRlVmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMAR2V0Q29sdW1uSW5kZXhlcwBTZXR0aW5n
-cwBFcXVhbHMAQ29ubmVjdGlvbnMAT2JqZWN0AEVuZE9mUm93c2V0AGdldF9EZWZhdWx0AFVzZXJD
-b21wb25lbnQAUGFyZW50Q29tcG9uZW50AFNjcmlwdENvbXBvbmVudABnZXRfUm93Q291bnQAc2V0
-X1Jvd0NvdW50AHpSb3dDb3VudABzZXRfcm93Q291bnQATWljcm9zb2Z0LlNxbFNlcnZlci5UeFNj
-cmlwdABNaWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5lSG9zdABJbnB1dDBfUHJvY2Vzc0lucHV0
-AEdldFZhbHVlV2l0aENvbnRleHQAU2NyaXB0Q29tcG9uZW50RXZhbENvbnRleHQAZ2V0X0V2YWx1
-YXRvckNvbnRleHQASW5wdXQwX1Byb2Nlc3NJbnB1dFJvdwBOZXh0Um93AGdldF9Bc3NlbWJseQAA
-gJtJAHMATgB1AGwAbAAgAHAAcgBvAHAAZQByAHQAeQAgAGMAYQBuAG4AbwB0ACAAYgBlACAAcwBl
-AHQAIAB0AG8AIABGAGEAbABzAGUALgAgAEEAcwBzAGkAZwBuACAAYQAgAHYAYQBsAHUAZQAgAHQA
-bwAgAHQAaABlACAAYwBvAGwAdQBtAG4AIABpAG4AcwB0AGUAYQBkAC4AAA9JAG4AcAB1AHQAIAAw
-AAARUgBvAHcAQwBvAHUAbgB0AABxUwBDAF8AYQBhADEAYgA2ADMAMQBkAGIANAAzAGIANAA0ADQA
-MgBiADQANQA1ADgAZgAwAGIAOABhADEAMgAzADUAYwBiAC4AUAByAG8AcABlAHIAdABpAGUAcwAu
-AFIAZQBzAG8AdQByAGMAZQBzAAAAAIcrmqeF1NFOr30VDUDBipQABCABAQgDIAABBSABARERBCAB
-AQ4FIAEBEVkJIAMBEj0dCBJBBSACAQgcAyAAAgYgAgIOEXUFIAEdCAgEIAASeQUgARJ9HAUAABKA
-gQYgARwSgIUEIAEBHAgAARKAiRGAjQUgABKAkQcgAgEOEoCRCLd6XFYZNOCJCImEXc2AgMyRAgYI
-AwYSFAMGEhgDBhJFAwYSUQMGElUDBhIgBSABARIMBCABAQIJIAQBCA4SPRJBBSABARJFAyAACAQA
-ABJRBAAAElUFAAEBElUEAAASIAMAAAEDKAAIAygAAgQIABJRBAgAElUECAASIAgBAAgAAAAAAB4B
-AAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfYWExYjYzMWRiNDNi
-NDQ0MmI0NTU4ZjBiOGExMjM1Y2IAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAxOQAASQEAGi5O
-RVRGcmFtZXdvcmssVmVyc2lvbj12NC41AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZy
-YW1ld29yayA0LjUEAQAAAAAAtAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291
-cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1
-YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVz
-b3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAAPwyAAAAAAAAAAAAABYzAAAAIAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAIMwAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/
-JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAEAwJ7AQAABG8GAAAGKh4CKAwAAAYqKgIDBAUoEgAACio6AhYDjBoAAAEoEwAACipaAywIAhYo
+FAAACipyAQAAcHMVAAAKeiYCFwMoEwAACipaAywIAhcoFAAACipyAQAAcHMVAAAKeh4CKBYAAAoq
+HgIoFwAACip+AigYAAAKAgJzEAAABn0CAAAEAgJzEQAABn0DAAAEKpIEcp4AAHAabxkAAAosFQIF
+AgMoGgAACg4EcwUAAAZvDgAABipKKwcCA28PAAAGA28KAAAGLfEqBio6AigbAAAKAgN9BAAABCo6
+AigbAAAKAgN9BQAABCqWAnsFAAAEbxwAAApyrgAAcG8dAAAKKB4AAApvHwAACqUaAAABKoYCewUA
+AARvHAAACnKuAABwbx0AAAoDjBoAAAFvIAAACioeAigbAAAKKq5+BgAABC0ecsAAAHDQBwAAAigh
+AAAKbyIAAApzIwAACoAGAAAEfgYAAAQqGn4HAAAEKh4CgAcAAAQqGn4IAAAEKh4CKCQAAAoqLnMZ
+AAAGgAgAAAQqAEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAAOgFAAAjfgAAVAYA
+AFAHAAAjU3RyaW5ncwAAAACkDQAANAEAACNVUwDYDgAAEAAAACNHVUlEAAAA6A4AALgBAAAjQmxv
+YgAAAAAAAAACAAABVxWgAQkBAAAA+gEzABYAAAEAAAAkAAAACAAAAAgAAAAaAAAAEgAAACQAAAAQ
+AAAABAAAAAgAAAAKAAAAAQAAAAUAAAABAAAAAAAzAwEAAAAAAAYAIwLyBAYAtwLyBAYAbwHfBA8A
+ZgUAAAYAnAHpAwYABgLpAwYA5wHpAwYAngLpAwYAQwLpAwYAXALpAwYAswHpAwYAzgH8AgoAdwK8
+AAoAiQS8AA4AegS8AAoAMgS8AAoASga8AAYA/AWhAwYAUgHfBAYAmgQSBQYAJgTUAxIAIgEdAxIA
+gwEdAxIACgG/AwYANwHyBAYAOgChAwYA+wOhAwYAFgOhAwYAFQShAxYAEQCqBBYAAQCqBEcA8QYA
+ABYAIgCqBAYA3QChAwYAjgChAwYARAfpAwAAAABAAAAAAAABAAEAAQAQALQDAAAQAAEAAQABABAA
+bQQAADkAAgAFAAEAEAAsBgAARQACAAwAAQAQAPAFAABJAAQAEAABABAAsQUAAEkABQARAAAAEAAZ
+BXUFSQAGABQAAAEQAOAFdQVhAAgAGAABAHQGggAGAPAFhQAGALEFiQABADoGjQABADoGjQARAKgD
+kQARAPoAlQARAH4AmQBQIAAAAADGANUCBgABAF8gAAAAAMYA4AIGAAEAZyAAAAAAxgAhB50AAQCD
+IAAAAACGGNIEBgACAIsgAAAAAIYY0gQbAAIAliAAAAAAhgh+BgEABQClIAAAAACGCHMDowAGALwg
+AAAAAIYIGwYQAAcAxiAAAAAAhghbA6MACADdIAAAAACGADgHKwAJAOUgAAAAAIYAAwYrAAkA7SAA
+AAAAhhjSBAYACQANIQAAAADGANAGqAAJADIhAAAAAMYByQadAA0ARSEAAAAAxgEhB50ADgBHIQAA
+AACGGNIEsgAPAFYhAAAAAIYY0gSyABAAZSEAAAAAhghaBrgAEQCLIQAAAACGCGcGAQARAK0hAAAA
+AIMY0gQGABIAtSEAAAAAkwiWBLwAEgDhIQAAAACTCOIAwQASAOghAAAAAJMI7gDGABIA8CEAAAAA
+lggPBswAEwD3IQAAAACGGNIEBgATAP8hAAAAAJEY2ATRABMAAAABADwHAAABAI8EAAACALsFAAAD
+AEAEAAABAPYCAAABAPYCAAABAPYCAAABAPYCAAABAEkAAAACALIAAAADAI8EAAAEAEAEAAABAI8E
+AAABADwHAAABAFAGAAABAFAGAAABAPYCAAABAPYCCQDSBAEAEQDSBAYAGQDSBAoAKQDSBBAAMQDS
+BBAAOQDSBBAAQQDSBBAASQDSBBAAUQDSBBAAWQDSBBAAYQDSBBAAaQDSBAYAmQDSBAYAuQDSBBUA
+yQDSBAYAiQDVAgYAiQDgAgYAcQDSBBsAcQCYAyUAcQCHAwEA2QDSBBAAcQA4BysAcQADBisAiQDS
+BAYA4QDpBS8AiQDPBTYAkQDSBAYAiQCkBTwA8QCPA0EAiQAMB0cA+QDdBk0A+QDsAlQAEQGgAFkA
+EQFAB2IAoQDSBGgAwQDSBAYALgALAPAALgATAPkALgAbABgBLgAjACEBLgArAEoBLgAzAEoBLgA7
+AEoBLgBDACEBLgBLAFABLgBTAEoBLgBbAGcBQwBjALEByQBzABgB4wBrALEB6QBzABgBAQF7ALEB
+AwABAAYABQAHAAYACAAIAAAAggbVAAAAdwPZAAAAHwbdAAAAXwPZAAAAdQbVAAAAmgThAAAAAgHm
+AAAAEwbrAAEABgADAAEABwAFAAEACAAHAAEACQAJAAIAEgALAAEAEwALAAIAFQANAAIAFgAPAAEA
+FwAPAAIAGAARAASAAAABAAAAAAAAAAAAAAAAAFEAAAAEAAAAAAAAAAAAAABwAHUAAAAAAA4AAAAA
+AAAAAAAAAHkAiwYAAAAADgAAAAAAAAAAAAAAeQCoBgAAAAAEAAAAAAAAAAAAAABwAKEDAAAAAA4A
+AAAAAAAAAAAAAHkASgQAAAAAAAAAAAEAAAAjBQAAAAAAAABJRFRTVmFyaWFibGUxMDAASURUU1Zh
+cmlhYmxlczEwMABJRFRTRXZhbHVhdG9yQ29udGV4dDEwMABJbnQzMgA8TW9kdWxlPgBJbnB1dElE
+AFNDX2FhMWI2MzFkYjQzYjQ0NDJiNDU1OGYwYjhhMTIzNWNiAG1zY29ybGliAGRlZmF1bHRJbnN0
+YW5jZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRsZQBJbnB1dE5hbWUATWljcm9z
+b2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUAVHlwZQBnZXRfQ3VsdHVyZQBzZXRfQ3VsdHVyZQBy
+ZXNvdXJjZUN1bHR1cmUAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UARWRpdG9yQnJvd3NhYmxlU3Rh
+dGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVidWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0
+ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRp
+dGxlQXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0
+dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlv
+bkF0dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5UHJvZHVj
+dEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJpYnV0ZQBTU0lTU2NyaXB0Q29tcG9uZW50
+RW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBh
+dGliaWxpdHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0RXhlY3V0ZQBzZXRfVmFsdWUAdmFsdWUA
+U3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBTdHJpbmcAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFND
+X2FhMWI2MzFkYjQzYjQ0NDJiNDU1OGYwYjhhMTIzNWNiLmRsbABzZXRfZXJyb3JDb21tZW50X0lz
+TnVsbABzZXRfcm93Q291bnRfSXNOdWxsAFNldE51bGwAZ2V0X0l0ZW0Ac2V0X0l0ZW0AU3lzdGVt
+AHJlc291cmNlTWFuAFNjcmlwdE1haW4AU3lzdGVtLkNvbmZpZ3VyYXRpb24AU3lzdGVtLkdsb2Jh
+bGl6YXRpb24AU3lzdGVtLlJlZmxlY3Rpb24ASW52YWxpZE9wZXJhdGlvbkV4Y2VwdGlvbgBTdHJp
+bmdDb21wYXJpc29uAEN1bHR1cmVJbmZvAE91dHB1dE5hbWVNYXAAT3V0cHV0TWFwAE1pY3Jvc29m
+dC5TcWxTZXJ2ZXIuRFRTUnVudGltZVdyYXAASW5wdXQwQnVmZmVyAFBpcGVsaW5lQnVmZmVyAFNj
+cmlwdEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlJ1
+bnRpbWUuV3JhcHBlcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdub3N0aWNzAFN5c3RlbS5SdW50
+aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBTQ19hYTFiNjMxZGI0M2I0NDQy
+YjQ1NThmMGI4YTEyMzVjYi5Qcm9wZXJ0aWVzLlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5n
+TW9kZXMAU0NfYWExYjYzMWRiNDNiNDQ0MmI0NTU4ZjBiOGExMjM1Y2IuUHJvcGVydGllcwBnZXRf
+UmVhZFdyaXRlVmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMAR2V0Q29sdW1uSW5kZXhlcwBT
+ZXR0aW5ncwBFcXVhbHMAQ29ubmVjdGlvbnMAT2JqZWN0AEVuZE9mUm93c2V0AGdldF9EZWZhdWx0
+AHNldF9lcnJvckNvbW1lbnQAVXNlckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29t
+cG9uZW50AGdldF9Sb3dDb3VudABzZXRfUm93Q291bnQAelJvd0NvdW50AHNldF9yb3dDb3VudABN
+aWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuUGlwZWxpbmVI
+b3N0AElucHV0MF9Qcm9jZXNzSW5wdXQAR2V0VmFsdWVXaXRoQ29udGV4dABTY3JpcHRDb21wb25l
+bnRFdmFsQ29udGV4dABnZXRfRXZhbHVhdG9yQ29udGV4dABJbnB1dDBfUHJvY2Vzc0lucHV0Um93
+AE5leHRSb3cAZ2V0X0Fzc2VtYmx5AAAAAACAm0kAcwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5
+ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMA
+aQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBz
+AHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAABFSAG8AdwBDAG8AdQBuAHQAAHFTAEMAXwBhAGEA
+MQBiADYAMwAxAGQAYgA0ADMAYgA0ADQANAAyAGIANAA1ADUAOABmADAAYgA4AGEAMQAyADMANQBj
+AGIALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAAYld+7TrlAk+o
+/8O3LBHDggAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQkgAwESPR0IEkEFIAIBCBwDIAACBiAC
+Ag4RdQUgAR0ICAQgABJ5BSABEn0cBQAAEoCBBiABHBKAhQQgAQEcCAABEoCJEYCNBSAAEoCRByAC
+AQ4SgJEIt3pcVhk04IkIiYRdzYCAzJECBggDBhIUAwYSGAMGEkUDBhJRAwYSVQMGEiAFIAEBEgwE
+IAEBAgkgBAEIDhI9EkEFIAEBEkUDIAAIBAAAElEEAAASVQUAAQESVQQAABIgAwAAAQMoAAgDKAAC
+AygADgQIABJRBAgAElUECAASIAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRocm93
+cwEIAQACAAAAAAAoAQAjU0NfYWExYjYzMWRiNDNiNDQ0MmI0NTU4ZjBiOGExMjM1Y2IAAAUBAAAA
+ABYBABFDb3B5cmlnaHQgQCAgMjAxOQAASQEAGi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC41AQBU
+DhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjUEAQAAAAAAtAAAAM7K774B
+AAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lv
+bj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUw
+ODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQ
+tAAAAIwzAAAAAAAAAAAAAKYzAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAACYMwAAAAAAAAAAAAAA
+AF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
 SAAAAFhAAADsAwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
@@ -4357,7 +4883,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAKDMAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAuDMAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -4402,7 +4928,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   dataType="System.String"
                   description="Checksum to match component metedata against compiled codes."
                   name="MetadataChecksum140"
-                  typeConverter="NOTBROWSABLE">6D</property>
+                  typeConverter="NOTBROWSABLE">A5</property>
                 <property
                   dataType="System.String"
                   name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
@@ -4426,6 +4952,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       dataType="i4"
                       lineageId="Package\DFT - Move emp data 1\Script RowCount.Outputs[Output 0].Columns[rowCount]"
                       name="rowCount" />
+                    <outputColumn
+                      refId="Package\DFT - Move emp data 1\Script RowCount.Outputs[Output 0].Columns[errorComment]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT - Move emp data 1\Script RowCount.Outputs[Output 0].Columns[errorComment]"
+                      name="errorComment" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -4440,7 +4973,113 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               version="1">
               <inputs>
                 <input
+                  refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 2].Columns[ID]"
+                      cachedDataType="i4"
+                      cachedName="ID"
+                      lineageId="Package\DFT - Move emp data 1\ODS - Read emp source table.Outputs[OLE DB Source Output].Columns[ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 2].Columns[EmpName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="EmpName"
+                      lineageId="Package\DFT - Move emp data 1\ODS - Read emp source table.Outputs[OLE DB Source Output].Columns[EmpName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[EmpName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 2].Columns[DOB]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DOB"
+                      lineageId="Package\DFT - Move emp data 1\ODS - Read emp source table.Outputs[OLE DB Source Output].Columns[DOB]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[DOB]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 2].Columns[rowCount]"
+                      cachedDataType="i4"
+                      cachedName="rowCount"
+                      lineageId="Package\DFT - Move emp data 1\Script RowCount.Outputs[Output 0].Columns[rowCount]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[rowCount]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 2].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      lineageId="Package\DFT - Move emp data 1\DCV - Convert DOB to date.Outputs[Data Conversion Error Output].Columns[ErrorCode]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[ErrorCode]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 2].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      lineageId="Package\DFT - Move emp data 1\DCV - Convert DOB to date.Outputs[Data Conversion Error Output].Columns[ErrorColumn]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[ErrorColumn]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 2].Columns[drv_ErrorComment]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="drv_ErrorComment"
+                      lineageId="Package\DFT - Move emp data 1\Derived Column.Outputs[Derived Column Output].Columns[drv_ErrorComment]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[errorComment]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
                   refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 1]"
+                  hasSideEffects="true"
                   name="Union All Input 1">
                   <inputColumns>
                     <inputColumn
@@ -4487,32 +5126,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 1].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      lineageId="Package\DFT - Move emp data 1\DCV - Convert DOB to date.Outputs[Data Conversion Error Output].Columns[ErrorCode]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[ErrorCode]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 1].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      lineageId="Package\DFT - Move emp data 1\DCV - Convert DOB to date.Outputs[Data Conversion Error Output].Columns[ErrorColumn]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[ErrorColumn]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 1].Columns[rowCount]"
                       cachedDataType="i4"
                       cachedName="rowCount"
@@ -4525,59 +5138,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           name="OutputColumnLineageID">#{Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[rowCount]}</property>
                       </properties>
                     </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 3]"
-                  hasSideEffects="true"
-                  name="Union All Input 3">
-                  <inputColumns>
                     <inputColumn
-                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 3].Columns[ID]"
-                      cachedDataType="i4"
-                      cachedName="ID"
-                      lineageId="Package\DFT - Move emp data 1\ODS - Read emp source table.Outputs[OLE DB Source Output].Columns[ID]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[ID]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 3].Columns[EmpName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="100"
-                      cachedName="EmpName"
-                      lineageId="Package\DFT - Move emp data 1\ODS - Read emp source table.Outputs[OLE DB Source Output].Columns[EmpName]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[EmpName]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 3].Columns[DOB]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="DOB"
-                      lineageId="Package\DFT - Move emp data 1\ODS - Read emp source table.Outputs[OLE DB Source Output].Columns[DOB]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[DOB]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 3].Columns[ErrorCode]"
+                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 1].Columns[ErrorCode]"
                       cachedDataType="i4"
                       cachedName="ErrorCode"
                       lineageId="Package\DFT - Move emp data 1\ODD - Load emp data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]">
@@ -4590,7 +5152,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 3].Columns[ErrorColumn]"
+                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 1].Columns[ErrorColumn]"
                       cachedDataType="i4"
                       cachedName="ErrorColumn"
                       lineageId="Package\DFT - Move emp data 1\ODD - Load emp data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]">
@@ -4603,26 +5165,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 3].Columns[rowCount]"
-                      cachedDataType="i4"
-                      cachedName="rowCount"
-                      lineageId="Package\DFT - Move emp data 1\Script RowCount.Outputs[Output 0].Columns[rowCount]">
+                      refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 1].Columns[drv_ErrorComment]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="drv_ErrorComment"
+                      lineageId="Package\DFT - Move emp data 1\Derived Column 1.Outputs[Derived Column Output].Columns[drv_ErrorComment]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[rowCount]}</property>
+                          name="OutputColumnLineageID">#{Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[errorComment]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
                 <input
-                  refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 2]"
+                  refId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 3]"
                   dangling="true"
                   hasSideEffects="true"
-                  name="Union All Input 2">
+                  name="Union All Input 3">
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -4665,6 +5229,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       dataType="i4"
                       lineageId="Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[rowCount]"
                       name="rowCount" />
+                    <outputColumn
+                      refId="Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[errorComment]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DFT - Move emp data 1\Union All.Outputs[Union All Output 1].Columns[errorComment]"
+                      name="errorComment" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -4674,7 +5245,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           <paths>
             <path
               refId="Package\DFT - Move emp data 1.Paths[Data Conversion Error Output]"
-              endId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 1]"
+              endId="Package\DFT - Move emp data 1\Derived Column.Inputs[Derived Column Input]"
               name="Data Conversion Error Output"
               startId="Package\DFT - Move emp data 1\DCV - Convert DOB to date.Outputs[Data Conversion Error Output]" />
             <path
@@ -4688,8 +5259,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               name="Derived Column Output"
               startId="Package\DFT - Move emp data 1\DC - Add audit details.Outputs[Derived Column Output]" />
             <path
+              refId="Package\DFT - Move emp data 1.Paths[Derived Column Output1]"
+              endId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DFT - Move emp data 1\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT - Move emp data 1.Paths[Derived Column Output2]"
+              endId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DFT - Move emp data 1\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
               refId="Package\DFT - Move emp data 1.Paths[OLE DB Destination Error Output]"
-              endId="Package\DFT - Move emp data 1\Union All.Inputs[Union All Input 3]"
+              endId="Package\DFT - Move emp data 1\Derived Column 1.Inputs[Derived Column Input]"
               name="OLE DB Destination Error Output"
               startId="Package\DFT - Move emp data 1\ODD - Load emp data.Outputs[OLE DB Destination Error Output]" />
             <path
@@ -4734,6 +5315,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           VSTAMinorVersion="0"
           Language="CSharp"
           ReadWriteVariables="User::RowCount">
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -4853,35 +5443,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_1e610d28c6b24807b1605aa11c7784c3.Properties.Settings.get_Default():ST_1e610d28c6b24807b1605aa11c7784c3.Properties.Sett" +
-    "ings")]
-
-namespace ST_1e610d28c6b24807b1605aa11c7784c3.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -5111,6 +5672,35 @@ namespace ST_1e610d28c6b24807b1605aa11c7784c3
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_1e610d28c6b24807b1605aa11c7784c3.Properties.Settings.get_Default():ST_1e610d28c6b24807b1605aa11c7784c3.Properties.Sett" +
+    "ings")]
+
+namespace ST_1e610d28c6b24807b1605aa11c7784c3.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <ProjectItem
             Name="Properties\AssemblyInfo.cs"
             Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -5140,15 +5730,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -5361,7 +5942,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\DFT - Move emp data (original)">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="181,42"
           Id="Package\DFT - Move emp data (original)\DC - Add audit details"
@@ -5391,7 +5972,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="597.464294360609,175.364707752743">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,33.247059878841"
               Start="0,0"
               End="0,25.747059878841">
@@ -5405,7 +5986,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5413,7 +5996,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="308.80000340598,87.4823535846592">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="-30.6666665304274,44.6588247391593"
               Start="0,0"
               End="-30.6666665304274,37.1588247391593">
@@ -5439,7 +6022,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5447,7 +6032,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="601.285722907709,250.211767631584">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,26.3058833052956"
               Start="0,0"
               End="0,18.8058833052956">
@@ -5461,7 +6046,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5469,7 +6056,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="307.285717866859,173.741178323818">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,38.5411775945379"
               Start="0,0"
               End="0,31.0411775945379">
@@ -5483,7 +6070,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5491,7 +6080,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="414.000003542219,153.75294303828">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="92.857147946649,0"
               Start="0,0"
               End="85.357147946649,0">
@@ -5543,37 +6132,67 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\DFT - Move emp data 1">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="181,42"
-          Id="Package\DFT - Move emp data 1\DC - Add audit details"
-          TopLeft="655.571437232349,213.611767631584" />
-        <NodeLayout
-          Size="200,42"
-          Id="Package\DFT - Move emp data 1\ODD - Log invalid records"
-          TopLeft="504.000008583069,276.517650936879" />
-        <NodeLayout
-          Size="178,42"
-          Id="Package\DFT - Move emp data 1\SC - Get error details"
-          TopLeft="708.857151488868,123.364707752743" />
-        <NodeLayout
-          Size="206,42"
-          Id="Package\DFT - Move emp data 1\DCV - Convert DOB to date"
-          TopLeft="86.000003542219,123.141178323818" />
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="182,42"
           Id="Package\DFT - Move emp data 1\ODD - Load emp data"
           TopLeft="170.571432191498,257.282355918356" />
         <NodeLayout
+          Size="157,42"
+          Id="Package\DFT - Move emp data 1\Script RowCount"
+          TopLeft="300,18" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\DFT - Move emp data 1\SC - Get error details"
+          TopLeft="748.857151488868,123.364707752743" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\DFT - Move emp data 1\Union All"
+          TopLeft="683,37" />
+        <NodeLayout
           Size="218,42"
           Id="Package\DFT - Move emp data 1\ODS - Read emp source table"
           TopLeft="46.00000340598,21.8823535846592" />
+        <NodeLayout
+          Size="206,42"
+          Id="Package\DFT - Move emp data 1\DCV - Convert DOB to date"
+          TopLeft="86.000003542219,123.141178323818" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\DFT - Move emp data 1\ODD - Log invalid records"
+          TopLeft="504.000008583069,276.517650936879" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\DFT - Move emp data 1\DC - Add audit details"
+          TopLeft="655.571437232349,213.611767631584" />
+        <EdgeLayout
+          Id="Package\DFT - Move emp data 1.Paths[OLE DB Source Output]"
+          TopLeft="264.00000340598,40.9411767923296">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="35.99999659402,0"
+              Start="0,0"
+              End="28.49999659402,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="28.49999659402,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - Move emp data 1.Paths[Derived Column Output]"
           TopLeft="655.571437232349,234.611767631584">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="-51.5714286492799,41.905883305295"
               Start="0,0"
               End="-51.5714286492799,34.405883305295">
@@ -5601,7 +6220,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="189.000003542219,165.141178323818">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="43.571428649279,92.141177594538"
               Start="0,0"
               End="43.571428649279,84.641177594538">
@@ -5631,167 +6250,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT - Move emp data 1.Paths[Output 0]"
-          TopLeft="797.857151488868,165.364707752743">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-51.785714256519,48.247059878841"
-              Start="0,0"
-              End="-51.785714256519,40.747059878841">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.1235299394205" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.1235299394205"
-                    Point2="0,24.1235299394205"
-                    Point3="-4,24.1235299394205" />
-                  <mssgle:LineSegment
-                    End="-47.785714256519,24.1235299394205" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-47.785714256519,24.1235299394205"
-                    Point2="-51.785714256519,24.1235299394205"
-                    Point3="-51.785714256519,28.1235299394205" />
-                  <mssgle:LineSegment
-                    End="-51.785714256519,40.747059878841" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="121,42"
-          Id="Package\DFT - Move emp data 1\Union All"
-          TopLeft="683,37" />
-        <EdgeLayout
-          Id="Package\DFT - Move emp data 1.Paths[Data Conversion Error Output]"
-          TopLeft="189.000003542219,123.141178323818">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="526.249996457781,-44.141178323818"
-              Start="0,0"
-              End="526.249996457781,-36.641178323818">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-24.7928979901993" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-24.7928979901993"
-                    Point2="0,-28.7928979901993"
-                    Point3="4,-28.7928979901993" />
-                  <mssgle:LineSegment
-                    End="522.249996457781,-28.7928979901993" />
-                  <mssgle:CubicBezierSegment
-                    Point1="522.249996457781,-28.7928979901993"
-                    Point2="526.249996457781,-28.7928979901993"
-                    Point3="526.249996457781,-32.7928979901993" />
-                  <mssgle:LineSegment
-                    End="526.249996457781,-36.641178323818" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="188.16995916639,-23.7928979901993,149.910078125,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\DFT - Move emp data 1.Paths[Union All Output 1]"
-          TopLeft="771.75,79">
+          TopLeft="762.333333333333,79">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="26.107151488868,44.364707752743"
+              StartConnector="{x:Null}"
+              EndConnector="75.5238181555346,44.364707752743"
               Start="0,0"
-              End="26.107151488868,36.864707752743">
+              End="75.5238181555346,36.864707752743">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.426003504323" />
+                    End="0,14.0932739611513" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.426003504323"
-                    Point2="0,15.426003504323"
-                    Point3="4,15.426003504323" />
+                    Point1="0,14.0932739611513"
+                    Point2="0,18.0932739611513"
+                    Point3="4,18.0932739611513" />
                   <mssgle:LineSegment
-                    End="22.107151488868,15.426003504323" />
+                    End="71.5238181555346,18.0932739611513" />
                   <mssgle:CubicBezierSegment
-                    Point1="22.107151488868,15.426003504323"
-                    Point2="26.107151488868,15.426003504323"
-                    Point3="26.107151488868,19.426003504323" />
+                    Point1="71.5238181555346,18.0932739611513"
+                    Point2="75.5238181555346,18.0932739611513"
+                    Point3="75.5238181555346,22.0932739611513" />
                   <mssgle:LineSegment
-                    End="26.107151488868,36.864707752743" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - Move emp data 1.Paths[OLE DB Destination Error Output]"
-          TopLeft="290.571432191498,257.282355918356">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="452.928567808502,-178.282355918356"
-              Start="0,0"
-              End="452.928567808502,-170.782355918356">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-68.2451376924057" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-68.2451376924057"
-                    Point2="0,-72.2451376924057"
-                    Point3="4,-72.2451376924057" />
-                  <mssgle:LineSegment
-                    End="448.928567808502,-72.2451376924057" />
-                  <mssgle:CubicBezierSegment
-                    Point1="448.928567808502,-72.2451376924057"
-                    Point2="452.928567808502,-72.2451376924057"
-                    Point3="452.928567808502,-76.2451376924057" />
-                  <mssgle:LineSegment
-                    End="452.928567808502,-170.782355918356" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="153.255377654251,-67.2451376924057,146.4178125,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="157,42"
-          Id="Package\DFT - Move emp data 1\Script RowCount"
-          TopLeft="300,18" />
-        <EdgeLayout
-          Id="Package\DFT - Move emp data 1.Paths[OLE DB Source Output]"
-          TopLeft="264.00000340598,40.9411767923296">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="35.99999659402,0"
-              Start="0,0"
-              End="28.49999659402,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="28.49999659402,0" />
+                    End="75.5238181555346,36.864707752743" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5805,7 +6288,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="378.5,60">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="-222.499996457781,63.141178323818"
               Start="0,0"
               End="-222.499996457781,55.641178323818">
@@ -5813,19 +6296,201 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.5927246667818" />
+                    End="0,24.5927246667818" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,33.5927246667818"
-                    Point2="0,37.5927246667818"
-                    Point3="-4,37.5927246667818" />
+                    Point1="0,24.5927246667818"
+                    Point2="0,28.5927246667818"
+                    Point3="-4,28.5927246667818" />
                   <mssgle:LineSegment
-                    End="-218.499996457781,37.5927246667818" />
+                    End="-218.499996457781,28.5927246667818" />
                   <mssgle:CubicBezierSegment
-                    Point1="-218.499996457781,37.5927246667818"
-                    Point2="-222.499996457781,37.5927246667818"
-                    Point3="-222.499996457781,41.5927246667818" />
+                    Point1="-218.499996457781,28.5927246667818"
+                    Point2="-222.499996457781,28.5927246667818"
+                    Point3="-222.499996457781,32.5927246667818" />
                   <mssgle:LineSegment
                     End="-222.499996457781,55.641178323818" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Move emp data 1.Paths[Output 0]"
+          TopLeft="837.857151488868,165.364707752743">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-91.785714256519,48.247059878841"
+              Start="0,0"
+              End="-91.785714256519,40.747059878841">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.1235299394205" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.1235299394205"
+                    Point2="0,24.1235299394205"
+                    Point3="-4,24.1235299394205" />
+                  <mssgle:LineSegment
+                    End="-87.785714256519,24.1235299394205" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-87.785714256519,24.1235299394205"
+                    Point2="-91.785714256519,24.1235299394205"
+                    Point3="-91.785714256519,28.1235299394205" />
+                  <mssgle:LineSegment
+                    End="-91.785714256519,40.747059878841" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="154,42"
+          Id="Package\DFT - Move emp data 1\Derived Column"
+          TopLeft="500,50" />
+        <EdgeLayout
+          Id="Package\DFT - Move emp data 1.Paths[Data Conversion Error Output]"
+          TopLeft="222.000003542219,123.141178323818">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="285.999996457781,-31.141178323818"
+              Start="0,0"
+              End="285.999996457781,-23.641178323818">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-8.60047677842347" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-8.60047677842347"
+                    Point2="0,-12.6004767784235"
+                    Point3="4,-12.6004767784235" />
+                  <mssgle:LineSegment
+                    End="281.999996457781,-12.6004767784235" />
+                  <mssgle:CubicBezierSegment
+                    Point1="281.999996457781,-12.6004767784235"
+                    Point2="285.999996457781,-12.6004767784235"
+                    Point3="285.999996457781,-16.6004767784235" />
+                  <mssgle:LineSegment
+                    End="285.999996457781,-23.641178323818" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="76.9136115101405,-7.60047677842347,132.1727734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Move emp data 1.Paths[Derived Column Output1]"
+          TopLeft="654,71">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="29,-13"
+              Start="0,0"
+              End="21.5,-13">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="10.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.5,0"
+                    Point2="14.5,0"
+                    Point3="14.5,-4" />
+                  <mssgle:LineSegment
+                    End="14.5,-9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14.5,-9"
+                    Point2="14.5,-13"
+                    Point3="18.5,-13" />
+                  <mssgle:LineSegment
+                    End="21.5,-13" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="154,42"
+          Id="Package\DFT - Move emp data 1\Derived Column 1"
+          TopLeft="448,153" />
+        <EdgeLayout
+          Id="Package\DFT - Move emp data 1.Paths[OLE DB Destination Error Output]"
+          TopLeft="290.571432191498,257.282355918356">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="234.428567808502,-62.282355918356"
+              Start="0,0"
+              End="234.428567808502,-54.782355918356">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-21.2386017446933" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-21.2386017446933"
+                    Point2="0,-25.2386017446933"
+                    Point3="4,-25.2386017446933" />
+                  <mssgle:LineSegment
+                    End="230.428567808502,-25.2386017446933" />
+                  <mssgle:CubicBezierSegment
+                    Point1="230.428567808502,-25.2386017446933"
+                    Point2="234.428567808502,-25.2386017446933"
+                    Point3="234.428567808502,-29.2386017446933" />
+                  <mssgle:LineSegment
+                    End="234.428567808502,-54.782355918356" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="44.005377654251,-20.2386017446933,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Move emp data 1.Paths[Derived Column Output2]"
+          TopLeft="525,153">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="199.666666666667,-74"
+              Start="0,0"
+              End="199.666666666667,-66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-39.8205546492659" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-39.8205546492659"
+                    Point2="0,-43.8205546492659"
+                    Point3="4,-43.8205546492659" />
+                  <mssgle:LineSegment
+                    End="195.666666666667,-43.8205546492659" />
+                  <mssgle:CubicBezierSegment
+                    Point1="195.666666666667,-43.8205546492659"
+                    Point2="199.666666666667,-43.8205546492659"
+                    Point3="199.666666666667,-47.8205546492659" />
+                  <mssgle:LineSegment
+                    End="199.666666666667,-66.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5837,19 +6502,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT - Move emp data 1\ODD - Log invalid records">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT - Move emp data 1\ODD - Load emp data">
     <Properties>
@@ -5868,6 +6520,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - Move emp data 1\ODD - Log invalid records">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
