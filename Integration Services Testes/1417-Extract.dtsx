@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="D8TBK3F1"
   DTS:CreatorName="D8TBK3F1\ray"
-  DTS:DTSID="{F663444F-E6F0-4649-87DF-22F6271F697E}"
+  DTS:DTSID="{5ECB28A3-B7B5-484B-AD3C-C0272B9784CB}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Extract"
+  DTS:ObjectName="1417-Extract"
   DTS:PackageType="5"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{6BC03270-F318-46CE-8EF1-554BE9DA559B}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{265FE5DB-A8C7-4F6E-9BBA-06EDD2F6ED66}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -638,7 +638,7 @@ WHERE
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
         <NodeLayout
           Size="117,35"
           Id="Package\End Package Log"
@@ -660,7 +660,7 @@ WHERE
           TopLeft="85.4716981132075,39.2641509433962">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="-0.792452830188665,34.377358490566"
               Start="0,0"
               End="-0.792452830188665,26.877358490566">
@@ -686,7 +686,7 @@ WHERE
           TopLeft="84.6792452830189,108.77358490566">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="1.62264150943395,31.9622641509434"
               Start="0,0"
               End="1.62264150943395,24.4622641509434">
@@ -723,7 +723,7 @@ WHERE
           TopLeft="127.72641509434,86.1037735849057">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="70.1132075471698,56.6792452830189"
               Start="0,0"
               End="62.6132075471698,56.6792452830189">
@@ -749,7 +749,7 @@ WHERE
           TopLeft="197.839622641509,184.292452830189">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="-70.1132075471698,102.339622641509"
               Start="0,0"
               End="-62.6132075471698,102.339622641509">
@@ -771,7 +771,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
-          Text="This sample assumes you have the AdventureWorks database installed locally.  In addition it expects&#xD;&#xA;another local database called MSSQLTIPS.&#xD;&#xA;&#xD;&#xA;Open the text file create_db_objects.txt and execute it in SQL Server Management Studio to create&#xD;&#xA;the tables and stored procedures used in this package. &#xD;&#xA;&#xD;&#xA;Fonte: https://www.mssqltips.com/sqlservertip/1417/custom-logging-in-sql-server-integration-services-ssis/"
+          Text="This sample assumes you have the AdventureWorks database installed locally.  In addition it expects&#xA;another local database called MSSQLTIPS.&#xA;&#xA;Open the text file create_db_objects.txt and execute it in SQL Server Management Studio to create&#xA;the tables and stored procedures used in this package. &#xA;&#xA;Fonte: https://www.mssqltips.com/sqlservertip/1417/custom-logging-in-sql-server-integration-services-ssis/"
           ParentId="Package"
           Size="542,115"
           Id="97e8a7fa-fca6-4ee2-bbe7-19b5756a270e"
