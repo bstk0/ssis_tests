@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pkg_FTP"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{828143CB-6BC0-4463-BE88-291C12BA4C29}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{D429D85A-3FE2-45D9-B21F-386D18B5E2B5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcl1VxYOa7kKDkDAvVzBZ0gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC3bhrMlN7IMtEWiIK8GI27eQziVl/YMHYE52uNuLULQQAAAAAOgAAAAAIAACAAAAB0h94OPt8Bt9zwM6zhsdJHr8uB35qciwTY5INz9L3w/yAAAAATepgUekD5xf46Tni6yRyUlg/TudPVMvjjMruX95mDXkAAAABqMdXSqXMhSgFUSbNR9dL+PmqW1wPZfiCFHnuJAMqf8SPsnqKvvgWI1cESMinefdKmLsT85Kw4FxNCM4tCmWZE</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcl1VxYOa7kKDkDAvVzBZ0gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACE0eH4iHSsbDWra/EgooRYrjEmDB9i8sV0KN61xS2EogAAAAAOgAAAAAIAACAAAADwDmyqwAKjrThRWUHi9Zox4AAYv6bpZ3v3T+x0bFRW6SAAAAAO+hlzMbSqj60kaDjmtIF0szEXJa9F9Kr9P9LKnW+Kp0AAAABnFOVbZnN7DaC1OceKU0OXLGdPR/3vBOgGllYy3p/puRGmCNuGH/5MUvB3YOL5L9Iaq2ZU2Z89qrT6ZnL4HL1q</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>

@@ -1,25 +1,25 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="12/24/2016 6:43:23 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="Test"
   DTS:CreatorName="test"
-  DTS:DTSID="{4215F5A9-C5DC-41EA-BA8E-A063883CAE16}"
+  DTS:DTSID="{4C183886-E398-4FD5-97B9-D109DB4B48C1}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1033"
   DTS:ObjectName="Get Error Column Name"
   DTS:PackageType="5"
   DTS:VersionBuild="101"
-  DTS:VersionGUID="{449CD0AE-02A5-40AA-B818-618569478653}">
+  DTS:VersionGUID="{FC24E672-C0A6-46AF-8081-13C404FA7091}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[TestDB]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{EF897620-DCAE-452E-9AE8-AA6303B8F70D}"
+      DTS:DTSID="{BEBB7779-2CFE-4490-B2A6-78027084895B}"
       DTS:ObjectName="TestDB">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -30,7 +30,7 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{7C5AFB59-0D23-46E2-A862-78081E881705}"
+      DTS:DTSID="{4826FBB3-B0BD-40AC-AB58-D954262EAC46}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ErrorComment">
@@ -40,7 +40,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{6940AC52-2465-4C60-A324-64FC9327D48E}"
+      DTS:DTSID="{399EC989-C6D4-4552-B2FD-B31E91D087F2}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="RowCount">
@@ -54,7 +54,7 @@
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:Disabled="True"
-      DTS:DTSID="{C403CAE1-447B-4153-9C6A-5930F202AEA3}"
+      DTS:DTSID="{1207F900-0812-4D81-82F3-59E7618530DD}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="DFT - Move emp data (original)"
@@ -1793,7 +1793,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:refId="Package\DFT - Move emp data 1"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{685d6566-67de-4870-bb73-2e1fe5c25730}"
+      DTS:DTSID="{BD3E24A8-9987-493B-ACF9-35FB9D88F19F}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="DFT - Move emp data 1"
@@ -5302,7 +5302,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:CreationName="Microsoft.ScriptTask"
       DTS:Description="Script Task"
       DTS:Disabled="True"
-      DTS:DTSID="{089D92C2-E15E-4A96-8730-9200CF6D0D46}"
+      DTS:DTSID="{CA7E3C61-F5BF-4DE0-9F12-F67847D31641}"
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Script Task"
